@@ -1,490 +1,503 @@
-﻿window.GPROMPTS_DATA = {
+window.GPROMPTS_DATA = {
   backgroundPresets: [
     {
       label: '🎃 Halloween / Terror',
       options: [
         {
-          label: '🪦 Cementerio gótico abandonado',
-          value: 'Abandoned gothic cemetery at night, crumbling old tombstones covered in moss, twisted dead trees, rusty iron fence in the distance, dark purple-grey sky with a full moon partially hidden behind clouds'
+          label: '🪦 Cementerio gótico con lluvia',
+          value: 'Abandoned gothic cemetery at night, heavy rain soaking old tombstones, puddles reflecting moonlight, twisted dead trees swaying, dark purple-grey sky with lightning in the distance'
         },
         {
-          label: '🏚️ Mansión victoriana embrujada',
-          value: 'Dark haunted Victorian mansion, broken stained glass windows, overgrown dead garden, creaking wooden porch, bats flying in moonlit sky'
+          label: '🏚️ Mansión victoriana con fiesta fantasma',
+          value: 'Haunted Victorian mansion seen through a rainy window, inside a ghostly party with floating chandeliers and translucent guests, warm lights contrasting with dark exterior'
         },
         {
-          label: '🌲 Bosque encantado oscuro',
-          value: 'Eerie dark enchanted forest, twisted bare trees with claw-like branches, glowing eyes peering from shadows, ancient stone path covered in dead leaves, thick mist between trees'
+          label: '🌲 Bosque encantado con luciérnagas rojas',
+          value: 'Dark enchanted forest with twisted trees, but thousands of red fireflies create a blood-like glow, thick mist, ancient altar in the center'
         },
         {
-          label: '🧙 Guarida de bruja',
-          value: "Witch's lair interior, bubbling green cauldron, shelves filled with potion bottles and skulls, cobwebs everywhere, flickering candles, ancient spell books"
+          label: '🧙 Guarida de bruja moderna',
+          value: "Modern witch's lair: neon signs, cauldron bubbling with purple smoke, LED candles, spell books on a glass table, city view through a foggy window"
         },
         {
-          label: '🌫️ Calle victoriana con niebla',
-          value: 'Foggy cobblestone street at midnight, flickering gas lamps, dark silhouettes in distance, old brick buildings, Jack the Ripper atmosphere'
+          label: '🌫️ Calle victoriana con niebla y un farol rojo',
+          value: 'Foggy cobblestone street at midnight, only one red lantern flickering, a silhouette of a top hat in the distance, Jack the Ripper meets cyberpunk vibe'
         },
         {
-          label: '🕯️ Capilla abandonada',
-          value: 'Abandoned stone chapel interior, broken pews, cold blue moonlight through stained glass, floating dust, eerie silence'
+          label: '🕯️ Capilla abandonada con órgano que toca solo',
+          value: 'Abandoned stone chapel, broken pews, cold blue moonlight, an old pipe organ with keys moving by themselves, floating sheet music'
         },
         {
-          label: '🕷️ Mansión con telarañas',
-          value: 'Dusty mansion hallway with spider webs, cracked portraits on the walls, creaking floorboards, faint candlelight'
+          label: '🕷️ Mansión con telarañas y retratos animados',
+          value: 'Dusty mansion hallway, giant spider webs, portrait paintings whose eyes follow you, faint candlelight that flickers in patterns'
         },
         {
-          label: '👻 Lago maldito',
-          value: 'Cursed lake at night, dead trees emerging from dark water, faint green glow, thin mist hovering above the surface'
+          label: '👻 Lago maldito con manos emergiendo',
+          value: 'Cursed lake at night, pale hands rising from dark water, dead trees with hanging moss, faint green glow, mist shaped like faces'
         }
       ]
     },
     {
-      label: '🌸 Primavera / Naturaleza',
+      label: '🌸 Primavera / Naturaleza con giro',
       options: [
         {
-          label: '🌸 Jardín de cerezos en flor',
-          value: 'Lush blooming garden in soft afternoon light, cherry blossom trees in full bloom with petals gently falling, winding stone path bordered by lavender and wildflowers, rolling green hills under soft pastel blue sky with wispy clouds'
+          label: '🌸 Cerezos en flor con cartas voladoras',
+          value: 'Lush cherry blossom garden, petals falling, but also old love letters floating in the air, soft afternoon light, romantic magical realism'
         },
         {
-          label: '🌷 Campo de tulipanes',
-          value: 'Vibrant tulip field stretching to the horizon, rows of red yellow and purple tulips, old wooden windmill in the distance, bright blue sky with fluffy white clouds, butterfly flying nearby'
+          label: '🌷 Campo de tulipanes con un teléfono rojo',
+          value: 'Vibrant tulip field stretching to the horizon, an old red rotary phone resting on the flowers, ringing silently, bright blue sky with fluffy clouds'
         },
         {
-          label: '🍄 Jardín de hadas encantado',
-          value: 'Enchanted fairy garden, oversized mushrooms with glowing spots, tiny fairy lights in the air, dewy flowers, soft mossy ground, magical golden sparkles floating'
+          label: '🍄 Jardín de hadas con electrodomésticos miniatura',
+          value: 'Enchanted fairy garden, oversized mushrooms, but tiny vintage washing machines and refrigerators among the flowers, glowing fairy lights, whimsical'
         },
         {
-          label: '🌿 Pradera con roble solitario',
-          value: 'Peaceful meadow with tall wildflowers swaying in breeze, single large oak tree with golden sunlight filtering through leaves, distant mountains with snow caps, clear stream reflecting sky'
+          label: '🌿 Pradera con roble y un columpio de neón',
+          value: 'Peaceful meadow, single large oak tree, a neon-lit swing hanging from a branch, golden sunset, distant mountains, surreal contrast'
         },
         {
-          label: '🌼 Campo de lavanda',
-          value: 'Endless lavender field at sunset, rows of purple flowers, warm golden light, gentle breeze, soft pastel sky'
+          label: '🌼 Campo de lavanda con una tormenta de mariposas',
+          value: 'Endless lavender field at sunset, thousands of monarch butterflies swirling like a tornado, warm golden light, gentle breeze'
         },
         {
-          label: '🌾 Granja campestre',
-          value: 'Sunny countryside farm with wooden fence, hay bales, small barn, green pastures, soft blue sky with clouds'
+          label: '🌾 Granja campestre con tractor oxidado y flores',
+          value: 'Sunny countryside farm, an abandoned rusty tractor covered in blooming wildflowers, soft blue sky, peaceful decay'
         }
       ]
     },
     {
-      label: '❄️ Invierno / Navidad',
+      label: '❄️ Invierno / Navidad inesperada',
       options: [
         {
-          label: '🏔️ Bosque nevado con cabaña',
-          value: 'Snow-covered pine forest at twilight, frozen lake reflecting purple sky, cozy wooden cabin with warm orange light in windows, gentle snowfall, smoke rising from chimney'
+          label: '🏔️ Bosque nevado con cabaña y chimenea de estrellas',
+          value: 'Snow-covered pine forest at twilight, cozy cabin, but chimney emits golden star-shaped sparks, frozen lake reflecting the milky way'
         },
         {
-          label: '🎄 Villa navideña',
-          value: 'Christmas village at night, snow-covered rooftops, warm glowing street lamps, decorated Christmas tree in town square, horse-drawn sleigh in distance, gentle snowfall'
+          label: '🎄 Villa navideña postapocalíptica',
+          value: 'Christmas village covered in ash, snow mixed with soot, decorated tree still standing but lights flickering, gas masks on snowmen, eerie'
         },
         {
-          label: '🏰 Castillo de hielo con auroras',
-          value: 'Frozen enchanted castle on mountain peak, northern lights dancing in dark sky, ice crystals floating in air, frozen waterfall, deep blue and purple atmosphere'
+          label: '🏰 Castillo de hielo con aurora que escribe mensajes',
+          value: 'Frozen enchanted castle, northern lights forming glowing words in the sky, ice crystals floating, deep blue atmosphere'
         },
         {
-          label: '🧊 Lago congelado',
-          value: 'Frozen lake with smooth ice, soft snow drifts, distant pine trees, pale winter sun, crisp blue sky'
+          label: '🧊 Lago congelado con patines de fuego',
+          value: 'Frozen lake, a pair of ice skates leave trails of soft flame instead of scratches, pale winter sun, crisp blue sky'
         }
       ]
     },
     {
-      label: '🏖️ Verano / Tropical',
+      label: '🏖️ Verano / Tropical con sorpresa',
       options: [
         {
-          label: '🏖️ Playa tropical al atardecer',
-          value: 'Pristine turquoise beach at sunset, crystal clear water with visible coral reef, white sand with palm trees casting long shadows, distant tropical islands, golden sky with pink clouds'
+          label: '🏖️ Playa al atardecer con un teléfono de concha',
+          value: 'Pristine turquoise beach at sunset, a giant conch shell that rings like an old telephone, golden sky, pink clouds, magical'
         },
         {
-          label: '🌴 Cascada en jungla tropical',
-          value: 'Tropical jungle waterfall cascading into emerald pool, lush green vegetation, exotic colorful flowers, sunbeams piercing through canopy, mist rising from water'
+          label: '🌴 Cascada en jungla con luces de neón',
+          value: 'Tropical jungle waterfall, but hidden neon tubes glow among the vines, emerald pool, mist rising, cyberpunk meets nature'
         },
         {
-          label: '🏝️ Isla paradisíaca',
-          value: 'Secluded tropical island with turquoise lagoon, white sand, palm trees, wooden hammock, bright sun and clear sky'
+          label: '🏝️ Isla paradisíaca con una cabina de fotos vintage',
+          value: 'Secluded tropical island, an old photo booth on the sand, turquoise lagoon, palm trees, bright sun, nostalgic tech'
         }
       ]
     },
     {
-      label: '🌆 Urbano / Futurista',
+      label: '🌆 Urbano / Futurista narrativo',
       options: [
         {
-          label: '🌃 Ciudad cyberpunk neón',
-          value: 'Neon-lit cyberpunk city alley at night, holographic billboards in Japanese and English, wet reflective streets, towering dark skyscrapers, flying vehicles in distance, steam rising from vents'
+          label: '🌃 Cyberpunk con puesto de flores vintage',
+          value: 'Neon-lit cyberpunk alley at night, rain, holographic billboards, but a single wooden flower stall with warm candlelight, old roses'
         },
         {
-          label: '🗼 Calle de Tokyo lluviosa',
-          value: 'Rainy Tokyo street at night, colorful neon signs reflecting on wet pavement, busy crosswalk with umbrellas, steam from food stalls, cinematic urban atmosphere'
+          label: '🗼 Calle de Tokyo con un robot abandonado',
+          value: 'Rainy Tokyo street at night, colorful neon signs, a small rusty robot sitting on a bench holding an umbrella, cinematic'
         },
         {
-          label: '🚀 Estación espacial',
-          value: 'Futuristic space station interior, large window showing Earth from orbit, holographic displays, sleek white and blue architecture, ambient LED lighting, zero gravity particles floating'
+          label: '🚀 Estación espacial con jardín interior',
+          value: 'Futuristic space station, large window showing Earth, but the interior is a lush garden with floating flowers, zero-gravity bees'
         },
         {
-          label: '🏙️ Azotea metropolitana',
-          value: 'Modern city rooftop at night, skyline of skyscrapers, glowing windows, helicopter light in the distance, soft wind'
+          label: '🏙️ Azotea con una silla vacía y un micrófono',
+          value: 'Modern city rooftop at night, skyline, a single chair and microphone under a spotlight, as if a concert just ended'
         }
       ]
     },
     {
-      label: '🏛️ Elegante / Clásico',
+      label: '🏛️ Elegante / Clásico con anomalía',
       options: [
         {
-          label: '📚 Gran biblioteca europea',
-          value: 'Grand European library with floor-to-ceiling bookshelves, warm ambient lighting, rolling wooden ladders, leather armchairs, golden afternoon light streaming through tall arched windows, dust particles in light'
+          label: '📚 Gran biblioteca con libros que susurran',
+          value: 'Grand European library, floor-to-ceiling bookshelves, warm light, but books whisper and pages turn alone, floating dust particles'
         },
         {
-          label: '💎 Salón de palacio Versalles',
-          value: 'Opulent Versailles-style palace ballroom, crystal chandeliers, gold-trimmed walls with Renaissance paintings, polished marble floor reflecting light, grand staircase'
+          label: '💎 Salón de palacio con un espejo roto que refleja otro tiempo',
+          value: 'Opulent Versailles-style ballroom, crystal chandeliers, a large broken mirror reflecting a futuristic city instead of the room'
         },
         {
-          label: '🏛️ Ruinas de templo griego',
-          value: 'Ancient Greek temple ruins at golden hour, tall marble columns with ivy, Mediterranean sea in background, warm sunlight casting long shadows, wildflowers growing between stones'
+          label: '🏛️ Ruinas de templo griego con un proyector de cine',
+          value: 'Ancient Greek temple ruins at golden hour, an old film projector showing silent movies on a marble column, wildflowers'
         },
         {
-          label: '🕰️ Teatro clásico',
-          value: 'Vintage opera theater interior, red velvet seats, golden ornamentation, dramatic stage lights, elegant atmosphere'
+          label: '🕰️ Teatro clásico con un piano que toca solo',
+          value: 'Vintage opera theater, red velvet seats, golden ornaments, a grand piano playing a waltz with no pianist, dramatic shadows'
         }
       ]
     },
     {
-      label: '🍂 Otoño',
+      label: '🍂 Otoño melancólico y mágico',
       options: [
         {
-          label: '🍂 Sendero de otoño',
-          value: 'Forest path covered in golden and red fallen leaves, tall maple and oak trees with autumn foliage, old wooden bridge over gentle stream, misty distance, warm dappled light through canopy'
+          label: '🍂 Sendero de otoño con cartas de amor esparcidas',
+          value: 'Forest path covered in golden leaves, old handwritten letters scattered on the ground, soft mist, warm dappled light, nostalgic'
         },
         {
-          label: '🏡 Cabaña de campo otoñal',
-          value: 'Cozy countryside cottage with thatched roof, surrounded by autumn trees in red orange and gold, pumpkin patch in front yard, stone wall with climbing ivy turning red, smoke from chimney'
+          label: '🏡 Cabaña de campo con una mecedora que se mueve sola',
+          value: 'Cozy countryside cottage, autumn trees, a rocking chair moving gently on the porch with no one there, pumpkin patch, smoke from chimney'
         },
         {
-          label: '🎑 Parque urbano otoñal',
-          value: 'City park in autumn, golden leaves swirling, benches with warm light, soft sunset glow, calm atmosphere'
+          label: '🎑 Parque urbano con un reloj de sol detenido',
+          value: 'City park in autumn, golden leaves, a sundial that shows midnight at noon, calm mysterious atmosphere'
         }
       ]
     },
     {
-      label: '📸 Estudio / Foto',
+      label: '✨ Fondos Cinemáticos / Narrativos (NUEVO)',
       options: [
         {
-          label: '🎬 Estudio de cine profesional',
-          value: 'Professional film studio with dark walls, soft box lighting setup, backdrop screen, reflective floor, cinematic atmosphere',
-          valueEs: 'Estudio de cine profesional con paredes oscuras, configuración de iluminación soft box, pantalla de fondo, suelo reflectante, atmósfera cinematográfica'
+          label: '📞 Teléfono en campo de lavanda',
+          value: 'An old red rotary phone ringing alone in a lavender field at sunset, mysterious atmosphere, hyperrealistic, shallow depth of field'
         },
         {
-          label: '📷 Estudio de fotografía clásico',
-          value: 'Classic photography studio with white cyclorama wall, soft overhead lighting, modern furniture, clean minimalist aesthetic',
-          valueEs: 'Estudio de fotografía clásico con pared ciclorama blanca, iluminación superior suave, mobiliario moderno, estética minimalista limpia'
+          label: '📚 Biblioteca flotante',
+          value: 'Abandoned library where books float and glow with soft blue light, dust particles, magical realism, volumetric lighting'
         },
         {
-          label: '💡 Estudio con luces de neón',
-          value: 'Modern photo studio with neon tube lights, colored LED panels, urban backdrop, creative lighting setup',
-          valueEs: 'Estudio fotográfico moderno con tubos de neón, paneles LED de colores, fondo urbano, configuración de iluminación creativa'
+          label: '🧸 Astronauta en arenero',
+          value: 'Toy astronaut lying in a sandbox with a puddle reflecting a starry nebula, miniature world, tilt-shift focus, dreamy'
         },
         {
-          label: '🪞 Estudio con espejos',
-          value: 'Photo studio with large mirrors on walls, professional lighting rigs, sleek contemporary design, open space',
-          valueEs: 'Estudio fotográfico con espejos grandes en las paredes, rigs de iluminación profesionales, diseño contemporáneo elegante, espacio abierto'
+          label: '🎈 Cumpleaños en mansión gótica',
+          value: 'Children´s birthday party setup in a decaying gothic mansion, colorful balloons and cobwebs, dramatic chiaroscuro, eerie joy'
         },
         {
-          label: '🎪 Estudio de moda',
-          value: 'Fashion studio with runway platform, professional spotlights, wardrobe racks, editorial backdrop, glamorous atmosphere',
-          valueEs: 'Estudio de moda con plataforma de pasarela, spotlights profesionales, percheros, fondo editorial, atmósfera glamorosa'
+          label: '🌧️ Cyberpunk floristería',
+          value: 'Rainy cyberpunk alley with a single vintage flower stall glowing warm, neon reflections on wet petals, cinematic contrast'
         },
         {
-          label: '🖼️ Estudio con fondos de colores',
-          value: 'Photo studio with colored paper backdrops in various vibrant colors, soft continuous lighting, professional portrait setup',
-          valueEs: 'Estudio fotográfico con fondos de papel de colores vibrantes, iluminación continua suave, configuración de retrato profesional'
-        },
-        {
-          label: '📸 Rincón de productos',
-          value: 'Product photography corner with white seamless background, softbox lighting, reflective surface, clean commercial look',
-          valueEs: 'Rincón de fotografía de productos con fondo blanco continuo, iluminación softbox, superficie reflectante, aspecto comercial limpio'
-        },
-        {
-          label: '🎭 Estudio con telón',
-          value: 'Studio with dramatic curtain backdrop, theatrical lighting, vintage feel, dramatic shadows and highlights',
-          valueEs: 'Estudio con telón de fondo dramático, iluminación teatral, sensación vintage, sombras y luces dramáticas'
+          label: '🕯️ Cena romántica en ruinas',
+          value: 'A candlelit dinner for two set inside an ancient crumbling temple, stars visible through the broken roof, wild vines, intimate'
         }
       ]
     },
     {
-      label: '🌳 Parques y Naturaleza',
+      label: '🎭 Contraste Emocional (NUEVO)',
       options: [
         {
-          label: '🌳 Parque urbano con árboles',
-          value: 'Urban park with tall green trees, grass lawn, walking paths, people in distance, afternoon sunlight filtering through leaves',
-          valueEs: 'Parque urbano con árboles verdes altos, Césped, senderos para caminar, personas al fondo, luz de la tarde filtrándose entre las hojas'
+          label: '🍼 Bebé llorando en un club nocturno vacío',
+          value: 'An empty, dark nightclub with a single baby crying in a crib on the dance floor, disco ball still spinning, melancholic'
         },
         {
-          label: '🌿 Jardín botánico',
-          value: 'Botanical garden with exotic plants, greenhouse in background, stone pathways, lush green vegetation, peaceful atmosphere',
-          valueEs: 'Jardín botánico con plantas exóticas, invernadero al fondo, caminos de piedra, vegetación verde exuberante, atmósfera pacífica'
+          label: '🎓 Graduación en un hospital abandonado',
+          value: 'An abandoned hospital ward, a single graduation cap and diploma on a dusty gurney, sunlight through broken windows, hopeful decay'
         },
         {
-          label: '🌲 Bosque urbano',
-          value: 'Urban forest with dense trees, natural light filtering through canopy, soft grass floor, nature within city',
-          valueEs: 'Bosque urbano con árboles densos, luz natural filtrándose por el dosel, suelo de hierba suave, naturaleza dentro de la ciudad'
+          label: '👰‍♀️ Novia en un campo de batalla',
+          value: 'A bride in a white dress standing in a muddy, smoky battlefield, holding a bouquet of wilting flowers, dramatic sky'
         },
         {
-          label: '🌸 Jardín público con flores',
-          value: 'Public garden with colorful flower beds, manicured lawns, decorative fountains, benches, springtime atmosphere',
-          valueEs: 'Jardín público con canteros de flores coloridos, Césped cuidado, fuentes decorativas, bancos, atmósfera de primavera'
-        },
-        {
-          label: '🍃 Parque con lago',
-          value: 'Park with small lake, ducks swimming, willow trees on shore, wooden dock, peaceful natural setting',
-          valueEs: 'Parque con lago pequeño, patos nadando, sauces en la orilla, muelle de madera, entorno natural pacífico'
-        },
-        {
-          label: '🌺 Jardín tropical exuberante',
-          value: 'Lush tropical garden with large palm trees, exotic flowers, dense greenery, humid atmosphere, natural light',
-          valueEs: 'Jardín tropical exuberante con palmeras grandes, flores exóticas, vegetación densa, atmósfera húmeda, luz natural'
-        },
-        {
-          label: '🪨 Jardín zen',
-          value: 'Japanese zen garden with raked sand patterns, moss-covered rocks, bamboo fence, peaceful minimalist design',
-          valueEs: 'Jardín zen japonés con patrones de arena rastrillada, rocas cubiertas de musgo, cerca de bambú, diseño minimalista pacífico'
-        },
-        {
-          label: '🌻 Campo de girasoles',
-          value: 'Sunflower field stretching to horizon, tall yellow flowers, blue sky with white clouds, warm summer light',
-          valueEs: 'Campo de girasoles extendiéndose hasta el horizonte, flores amarillas altas, cielo azul con nubes blancas, luz cálida de verano'
+          label: '🤖 Robot llorando en un parque de diversiones',
+          value: 'An old amusement park at night, a small robot sitting on a carousel, tears of oil falling, neon lights flickering'
         }
       ]
     },
     {
-      label: '🏠 Interiores Caseros',
+      label: '💡 Luz como protagonista (NUEVO)',
       options: [
         {
-          label: '🛋️ Sala moderna',
-          value: 'Modern living room with comfortable sofa, coffee table, large window with natural light, minimalist decor, neutral colors',
-          valueEs: 'Sala moderna con sofá cómodo, mesa de centro, ventana grande con luz natural, decoración minimalista, colores neutros'
+          label: '🐟 Habitación iluminada por pecera de medusas',
+          value: 'A dark bedroom lit only by a fish tank with bioluminescent jellyfish, soft blue and pink glow on the walls, cozy and surreal'
         },
         {
-          label: '🪟 Cuarto con ventana grande',
-          value: 'Bedroom with large window, soft bed, warm lighting, cozy atmosphere, personal belongings visible, homey feel',
-          valueEs: 'Dormitorio con ventana grande, cama suave, iluminación cálida, atmósfera acogedora, objetos personales visibles, sensación hogareña'
+          label: '🌙 Bosque con caminos de luz lunar',
+          value: 'Forest at night, moonbeams create glowing pathways on the ground, fireflies follow the light trails, magical'
         },
         {
-          label: '☕ Cocina acogedora',
-          value: 'Cozy kitchen with wooden cabinets, warm counter lighting, plants on windowsill, homey appliances, inviting atmosphere',
-          valueEs: 'Cocina acogedora con armarios de madera, iluminación cálida de mostrador, plantas en el alféizar, electrodomésticos hogareños, atmósfera invitante'
+          label: '🏮 Mercado nocturno con solo faroles rojos',
+          value: 'Night market alley, all light comes from red paper lanterns, everything else in deep blue shadow, mysterious and vibrant'
         },
         {
-          label: '📚 Estudio en casa',
-          value: 'Home office study with bookshelf, desk, lamp, computer, personal items, warm and productive atmosphere',
-          valueEs: 'Estudio de oficina en casa con estantería, escritorio, lámpara, computadora, objetos personales, atmósfera cálida y productiva'
-        },
-        {
-          label: '🛁 Baño elegante',
-          value: 'Elegant bathroom with marble surfaces, large mirror, soft lighting, plants, modern fixtures, spa-like atmosphere',
-          valueEs: 'Baño elegante con superficies de mármol, espejo grande, iluminación suave, plantas, accesorios modernos, atmósfera tipo spa'
-        },
-        {
-          label: '🍳 Comedor familiar',
-          value: 'Family dining room with wooden table, chairs, warm lighting, window view, home-cooked meal atmosphere',
-          valueEs: 'Comedor familiar con mesa de madera, sillas, iluminación cálida, vista a la ventana, atmósfera de comida casera'
-        },
-        {
-          label: '🌿 Terraza con plantas',
-          value: 'Terrace with potted plants, comfortable seating, string lights, urban view, relaxed outdoor living space',
-          valueEs: 'Terraza con plantas en macetas, asientos cómodos, luces colgantes, vista urbana, espacio de vida al aire libre relajado'
-        },
-        {
-          label: '🪵 Chimenea acogedora',
-          value: 'Cozy room with fireplace, warm lighting, comfortable furniture, books, soft textures, intimate atmosphere',
-          valueEs: 'Habitación acogedora con chimenea, iluminación cálida, mobiliario cómodo, libros, texturas suaves, atmósfera íntima'
+          label: '🔦 Linterna que revela estrellas en el suelo',
+          value: 'A person holding a flashlight, the beam illuminates not the floor but tiny stars and constellations on the ground, cosmic'
         }
       ]
     },
     {
-      label: '🏙️ Urbano Casual',
+      label: '📸 Estudio / Foto (mejorado)',
       options: [
         {
-          label: '☕ Calle con cafeterías',
-          value: 'Bustling street with cafes and outdoor seating, people walking, awnings, warm afternoon light, urban life',
-          valueEs: 'Calle concurrida con cafeterías y asientos al aire libre, personas caminando, toldos, luz cálida de la tarde, vida urbana'
+          label: '🎬 Estudio de cine profesional con humo de color',
+          value: 'Professional film studio, dark walls, softbox lighting, but colored smoke in pastel hues floating, reflective floor, cinematic'
         },
         {
-          label: '🚶 Calle comercial concurrida',
-          value: 'Busy commercial street with shops, pedestrians, street signs, urban buildings, dynamic city atmosphere',
-          valueEs: 'Calle comercial concurrida con tiendas, peatones, señalización urbana, edificios urbanos, atmósfera dinámica de ciudad'
+          label: '📷 Estudio de fotografía con espejos rotos',
+          value: 'Classic photography studio, white cyclorama, but a wall of broken mirrors creating kaleidoscopic reflections, minimalist but chaotic'
         },
         {
-          label: '🏪 Mercado local',
-          value: 'Local market with fresh produce stands, colorful fruits and vegetables, bustling activity, authentic local feel',
-          valueEs: 'Mercado local con puestos de productos frescos, frutas y verduras coloridas, actividad bulliciosa, sensación auténtica local'
+          label: '💡 Estudio con luces de neón y una silla vacía',
+          value: 'Modern photo studio, neon tube lights, colored LED panels, a single empty chair in the center, creative and lonely'
         },
         {
-          label: '🚉 Estación de tren',
-          value: 'Train station with platform, tracks in distance, travelers, architectural details, travel atmosphere',
-          valueEs: 'Estación de tren con andén, vías al fondo, viajeros, detalles arquitectónicos, atmósfera de viaje'
+          label: '🪞 Estudio con espejos y proyecciones',
+          value: 'Photo studio with large mirrors, projectors casting moving abstract patterns on the walls, sleek design, infinite reflections'
         },
         {
-          label: '🛤️ Andén urbano',
-          value: 'Urban train platform at sunset, tracks stretching to horizon, soft golden light, waiting area',
-          valueEs: 'Andén urbano al atardecer, vías extendiéndose hasta el horizonte, luz dorada suave, área de espera'
+          label: '🎪 Estudio de moda con maniquíes vivientes',
+          value: 'Fashion studio, runway platform, mannequins in poses that change when you blink, spotlights, glamorous and eerie'
         },
         {
-          label: '🎨 Calle con arte urbano',
-          value: 'Street with colorful murals and graffiti art, urban wall art, creative street environment, vibrant atmosphere',
-          valueEs: 'Calle con murales coloridos y arte graffiti, arte urbano en paredes, entorno callejero creativo, atmósfera vibrante'
+          label: '🖼️ Estudio con fondos de colores y sombras animadas',
+          value: 'Photo studio with colored paper backdrops, soft continuous lighting, but shadows on the wall move like silent films'
         },
         {
-          label: '🏗️ Construcción urbana',
-          value: 'Urban construction site with scaffolding, cranes, building materials, city skyline in background',
-          valueEs: 'Sitio de construcción urbana con andamios, grúas, materiales de construcción, silueta de la ciudad al fondo'
+          label: '📸 Rincón de productos con lupa gigante',
+          value: 'Product photography corner, white seamless background, a giant magnifying glass floating, softbox lighting, commercial but surreal'
         },
         {
-          label: '🌙 Plaza nocturna',
-          value: 'City square at night with soft ambient lighting, empty benches, landmark building, quiet urban evening',
-          valueEs: 'Plaza de la ciudad de noche con iluminación ambiental suave, bancos vacíos, edificio emblemáticos, tarde urbana silenciosa'
+          label: '🎭 Estudio con telón y piano invisible',
+          value: 'Studio with dramatic curtain backdrop, theatrical lighting, an invisible piano playing jazz, vintage and mysterious'
         }
       ]
     },
     {
-      label: '🏛️ Locaciones Profesionales',
+      label: '🌳 Parques y Naturaleza (mejorado)',
       options: [
         {
-          label: '🏢 Oficina corporativa',
-          value: 'Corporate office with glass walls, modern furniture, city view, professional environment, bright natural light',
-          valueEs: 'Oficina corporativa con paredes de vidrio, mobiliario moderno, vista a la ciudad, entorno profesional, luz natural brillante'
+          label: '🌳 Parque urbano con árbol que tiene ojos',
+          value: 'Urban park, tall green trees, but one tree has dozens of eyes on its trunk, watching, afternoon sunlight, eerie calm'
         },
         {
-          label: '⚕️ Clínica / Consultorio',
-          value: 'Medical clinic or professional office with clean surfaces, modern equipment, sterile yet welcoming atmosphere',
-          valueEs: 'Clínica médica u oficina profesional con superficies limpias, equipo moderno, atmósfera estéril pero acogedora'
+          label: '🌿 Jardín botánico con estatuas que respiran',
+          value: 'Botanical garden, exotic plants, marble statues that seem to breathe (chest moves slightly), stone pathways, peaceful but alive'
         },
         {
-          label: '📊 Sala de juntas',
-          value: 'Conference room with large table, chairs, presentation screen, professional lighting, business atmosphere',
-          valueEs: 'Sala de juntas con mesa grande, sillas, pantalla de presentación, iluminación profesional, atmósfera de negocios'
+          label: '🌲 Bosque urbano con radios antiguas colgando',
+          value: 'Urban forest, dense trees, old vintage radios hanging from branches playing static, natural light filtering, nostalgic'
         },
         {
-          label: '🎓 Aula / Universidad',
-          value: 'University classroom or lecture hall with desks, chalkboard, windows, academic atmosphere, natural light',
-          valueEs: 'Aula universitaria o salón de clases con pupitres, pizarra, ventanas, atmósfera académica, luz natural'
+          label: '🌸 Jardín público con flores que suenan como campanas',
+          value: 'Public garden, colorful flower beds, each flower emits a soft bell tone when the wind blows, springtime, magical realism'
         },
         {
-          label: '🏦 Banco / Institución',
-          value: 'Bank or financial institution with marble floors, professional desks, security features, formal atmosphere',
-          valueEs: 'Banco o institución financiera con pisos de mármol, escritorios profesionales, medidas de seguridad, atmósfera formal'
+          label: '🍃 Parque con lago y barco de papel gigante',
+          value: 'Park with small lake, a giant origami boat floating, ducks swimming around it, willow trees, peaceful surreal'
         },
         {
-          label: '✈️ Aeropuerto / Terminal',
-          value: 'Airport terminal with large windows, departure boards, travelers, modern architectural design, busy atmosphere',
-          valueEs: 'Terminal de aeropuerto con ventanas grandes, tableros de salidas, viajeros, diseño arquitectónico moderno, atmósfera concurrida'
+          label: '🌺 Jardín tropical con mariposas de vidrio',
+          value: 'Lush tropical garden, large palm trees, butterflies made of stained glass flying, sunlight creating colored shadows'
         },
         {
-          label: '🏥 Hospital moderno',
-          value: 'Modern hospital corridor with clean white walls, medical equipment, soft lighting, sterile professional environment',
-          valueEs: 'Corredor de hospital moderno con paredes blancas limpias, equipo médico, iluminación suave, entorno profesional estéril'
+          label: '🪨 Jardín zen con arena que dibuja sola',
+          value: 'Japanese zen garden, raked sand patterns that change by themselves, moss-covered rocks, bamboo fence, meditative but uncanny'
         },
         {
-          label: '🎼 Sala de conciertos',
-          value: 'Concert hall or music venue with stage, seating, dramatic lighting, acoustic panels, artistic atmosphere',
-          valueEs: 'Sala de conciertos o venue musical con escenario, asientos, iluminación dramática, paneles acústicos, atmósfera artística'
+          label: '🌻 Campo de girasoles con un reloj de sol gigante',
+          value: 'Sunflower field, a giant stone sundial in the center, the shadow moves backwards, warm summer light, time anomaly'
         }
       ]
     },
     {
-      label: '🧒 Infantil / Niños',
+      label: '🏠 Interiores Caseros con toque mágico',
       options: [
         {
-          label: '🎨 Fondo de caricaturas coloridas',
-          value: 'Colorful cartoon background with bright fun patterns, cartoon stars and shapes, playful vibrant atmosphere',
-          valueEs: 'Fondo de caricaturas coloridas con patrones divertidos brillante, estrellas y formas de cartoon, atmósfera vibrante y lúdica'
+          label: '🛋️ Sala moderna con muebles que levitan',
+          value: 'Modern living room, comfortable sofa floating a few inches above the floor, coffee table with levitating books, natural light, surreal calm'
         },
         {
-          label: '🦸 Fondo de súper héroes',
-          value: 'Superhero themed background with comic book style, dynamic action pose, bold colors and dramatic lighting',
-          valueEs: 'Fondo temático de súper héroes estilo cómic, pose dinámica de acción, colores boldly dramáticos e iluminación'
+          label: '🪟 Cuarto con ventana que muestra otro planeta',
+          value: 'Bedroom, large window, but outside is an alien landscape with twin suns, soft bed, warm lighting, cozy sci-fi'
         },
         {
-          label: '👸 Fondo de princesas',
-          value: 'Princess themed background with castle elements, sparkly pink and purple palette, magical fairytale atmosphere',
-          valueEs: 'Fondo temático de princesa con elementos de castillo, paleta rosa y púrpura brillante, atmósfera de cuento de hadas'
+          label: '☕ Cocina acogedora con electrodomésticos parlantes',
+          value: 'Cozy kitchen, wooden cabinets, the refrigerator and toaster have cute faces and are chatting, warm lighting, whimsical'
         },
         {
-          label: '🦕 Fondo de dinosaurios',
-          value: 'Dinosaur themed background with prehistoric jungle setting, green and brown tones, adventurous atmosphere',
-          valueEs: 'Fondo temático de dinosaurios con selva prehistórica, tonos verdes y marrones, atmósfera aventurera'
+          label: '📚 Estudio en casa con retratos animados',
+          value: 'Home office, bookshelf, desk, portrait paintings on the wall that wave at you, warm productive atmosphere, magical'
         },
         {
-          label: '🦄 Fondo de unicornios',
-          value: 'Unicorn themed background with rainbow and sparkles, pastel colors, magical whimsical atmosphere',
-          valueEs: 'Fondo temático de unicornios con arcoíris y destellos, colores pastel, atmósfera mágica y fantástica'
+          label: '🛁 Baño elegante con agua que brilla',
+          value: 'Elegant bathroom, marble surfaces, the water in the tub glows with soft golden light, plants, spa-like and mystical'
         },
         {
-          label: '🏰 Fondo de castillo',
-          value: 'Fairytale castle background with towers and flags, medieval architecture, majestic royal atmosphere',
-          valueEs: 'Fondo de castillo de cuento de hadas con torres y banderas, arquitectura medieval, atmósfera real majestuosa'
+          label: '🍳 Comedor familiar con una mesa que se pone sola',
+          value: 'Family dining room, wooden table, plates and cutlery arrange themselves, warm lighting, window view, magical household'
         },
         {
-          label: '🎪 Fondo de circo',
-          value: 'Circus themed background with tents and balloons, bright red and yellow colors, fun festive atmosphere',
-          valueEs: 'Fondo temático de circo con carpas y globos, colores rojo y amarillo brillante, atmósfera festiva divertida'
+          label: '🌿 Terraza con plantas que cantan',
+          value: 'Terrace, potted plants that hum soft melodies, string lights, urban view, relaxed and enchanted'
         },
         {
-          label: '🚀 Fondo espacial infantil',
-          value: 'Child-friendly space background with planets and stars, colorful cartoon rockets, dreamy sci-fi atmosphere',
-          valueEs: 'Fondo espacial infantil con planetas y estrellas, cohetes de cartoon coloridos, atmósfera de ciencia ficción onírica'
-        },
-        {
-          label: '🐱 Fondo de animales tiernos',
-          value: 'Cute animal background with fluffy kittens and puppies, soft pastel colors, warm friendly atmosphere',
-          valueEs: 'Fondo de animales tiernos con gatitos y cachorros suaves, colores pastel suaves, atmósfera cálida amigable'
-        },
-        {
-          label: '🎮 Fondo de videojuegos',
-          value: 'Video game themed background with pixel art style, retro gaming elements, nostalgic fun atmosphere',
-          valueEs: 'Fondo temático de videojuegos estilo pixel art, elementos de gaming retro, atmósfera divertida nostálgica'
+          label: '🪵 Chimenea acogedora con fuego que forma figuras',
+          value: 'Cozy room with fireplace, flames that dance into animal shapes, warm lighting, comfortable furniture, intimate and magical'
         }
       ]
     },
     {
-      label: '📸 Estudio Profesional',
+      label: '🏙️ Urbano Casual con historias',
       options: [
         {
-          label: '⬜ Fondo sólido monocromático',
-          value: 'Solid color seamless background, uniform surface without texture, clean minimalist look, professional studio lighting',
-          valueEs: 'Fondo sólido de un color, superficie uniforme sin textura, aspecto minimalista limpio, iluminación de estudio profesional'
+          label: '☕ Calle con cafeterías y una máquina de escribir pública',
+          value: 'Bustling street, outdoor cafes, a public typewriter on a small table with a sign "write your secret", warm afternoon light'
         },
         {
-          label: '🌫️ Fondo degradado',
-          value: 'Gradient background with smooth color transition, light to dark fade, creates depth and dimension, soft lighting',
-          valueEs: 'Fondo degradado con transición suave de color, desvanecimiento claro a oscuro, crea profundidad y dimensión, iluminación suave'
+          label: '🚶 Calle comercial con un maniquí que se mueve',
+          value: 'Busy commercial street, shop windows, one mannequin changes pose every few seconds, nobody notices, dynamic city life'
         },
         {
-          label: '💡 Fondo con luz proyectada',
-          value: 'Background with projected light shapes, circles and soft patterns, creative lighting design, modern aesthetic',
-          valueEs: 'Fondo con formas de luz proyectada, círculos y patrones suaves, diseño de iluminación creativa, estética moderna'
+          label: '🏪 Mercado local con un loro adivino',
+          value: 'Local market, fresh produce stands, a parrot in a cage that predicts the future for a coin, bustling, authentic and magical'
         },
         {
-          label: '✨ Fondo con brillo controlado',
-          value: 'Solid background with controlled highlight areas, soft shadows and glow effects, dimensional studio setup',
-          valueEs: 'Fondo sólido con áreas de brillo controlado, efectos de sombras suaves y resplandor, configuración de estudio dimensional'
+          label: '🚉 Estación de tren con un reloj que cuenta hacia atrás',
+          value: 'Train station platform, departure board, a large clock that runs backwards, travelers, architectural details, time travel vibe'
         },
         {
-          label: '⬛ Fondo negro profundo',
-          value: 'Deep black seamless background, pure black surface for high contrast, dramatic studio lighting, editorial look',
-          valueEs: 'Fondo negro puro seamless, superficie negra pura para alto contraste, iluminación de estudio dramática, look editorial'
+          label: '🛤️ Andén urbano con un maletero olvidado',
+          value: 'Urban train platform at sunset, an old suitcase with stickers from fictional cities, soft golden light, mysterious'
         },
         {
-          label: '⬜ Fondo blanco limpio',
-          value: 'Clean white seamless background, pure white surface for bright portraits, soft diffused lighting, commercial photography',
-          valueEs: 'Fondo blanco limpio seamless, superficie blanca pura para retratos brillantes, iluminación difusa suave, fotografía comercial'
+          label: '🎨 Calle con arte urbano que cobra vida',
+          value: 'Street with colorful murals, the painted characters move slightly, urban wall art, creative, vibrant and alive'
         },
         {
-          label: '🎭 Fondo de tela/textura',
-          value: 'Fabric textured background with elegant drapes, flowing cloth elements, classic portrait studio setting',
-          valueEs: 'Fondo con textura de tela con elegantes drapeados, elementos de tela fluyendo, configuración de estudio de retrato clásico'
+          label: '🏗️ Construcción urbana con una grúa que sujeta una luna',
+          value: 'Urban construction site, scaffolding, a crane holding a giant fake moon prop, city skyline, surreal industrial'
         },
         {
-          label: '🌈 Fondo de colores vibrantes',
-          value: 'Vibrant colored background, bold saturated colors for creative shoots, dynamic studio lighting, fashion photography',
-          valueEs: 'Fondo de colores vibrantes, colores saturados bold para sesiones creativas, iluminación dinámica, fotografía de moda'
+          label: '🌙 Plaza nocturna con farolas que proyectan constelaciones',
+          value: 'City square at night, ambient lighting, but each lamppost projects a different constellation on the ground, quiet and cosmic'
+        }
+      ]
+    },
+    {
+      label: '🏛️ Locaciones Profesionales con anomalía',
+      options: [
+        {
+          label: '🏢 Oficina corporativa con peces voladores',
+          value: 'Corporate office, glass walls, modern furniture, but colorful fish swim in the air, bright natural light, surreal workplace'
+        },
+        {
+          label: '⚕️ Clínica / Consultorio con esqueletos educados',
+          value: 'Medical clinic, clean surfaces, modern equipment, a skeleton in a doctor´s coat holding a clipboard, sterile but humorous'
+        },
+        {
+          label: '📊 Sala de juntas con un elefante invisible',
+          value: 'Conference room, large table, chairs, presentation screen, but an invisible elephant leaves footprints on the carpet, business satire'
+        },
+        {
+          label: '🎓 Aula / Universidad con tizas que escriben solas',
+          value: 'University classroom, desks, chalkboard, chalk writing mathematical formulas by itself, natural light, academic magic'
+        },
+        {
+          label: '🏦 Banco / Institución con un baúl de tesoro',
+          value: 'Bank, marble floors, professional desks, an old treasure chest half-open with gold coins in the middle of the lobby, formal but pirate'
+        },
+        {
+          label: '✈️ Aeropuerto / Terminal con puertas a destinos imposibles',
+          value: 'Airport terminal, large windows, departure boards listing cities like Atlantis and Narnia, travelers, modern design'
+        },
+        {
+          label: '🏥 Hospital moderno con plantas curativas luminosas',
+          value: 'Modern hospital corridor, clean white walls, glowing plants in pots that emit healing light, soft lighting, hopeful'
+        },
+        {
+          label: '🎼 Sala de conciertos con un violín flotante',
+          value: 'Concert hall, stage, seating, a violin floating and playing a solo, dramatic lighting, acoustic panels, artistic and magical'
+        }
+      ]
+    },
+    {
+      label: '🧒 Infantil / Niños (versión mágica)',
+      options: [
+        {
+          label: '🎨 Fondo de caricaturas con dibujos que saltan',
+          value: 'Colorful cartoon background, drawings of stars and shapes that pop out of the paper, playful, vibrant, interactive feel'
+        },
+        {
+          label: '🦸 Fondo de súper héroes con capa real',
+          value: 'Superhero themed, comic book style, a real fabric cape floating in the wind, bold colors, dramatic lighting'
+        },
+        {
+          label: '👸 Fondo de princesas con espejo parlante',
+          value: 'Princess themed, castle elements, a magic mirror that talks and makes funny faces, sparkly pink and purple, fairytale'
+        },
+        {
+          label: '🦕 Fondo de dinosaurios con huellas que brillan',
+          value: 'Dinosaur themed, prehistoric jungle, glowing dinosaur footprints on the ground, adventurous, green and brown tones'
+        },
+        {
+          label: '🦄 Fondo de unicornios con nubes de algodón de azúcar',
+          value: 'Unicorn themed, rainbow and sparkles, clouds made of cotton candy, pastel colors, magical, whimsical'
+        },
+        {
+          label: '🏰 Fondo de castillo con dragón robot',
+          value: 'Fairytale castle, towers and flags, a friendly robot dragon sitting on the wall, majestic but sci-fi'
+        },
+        {
+          label: '🎪 Fondo de circo con animales de sombras',
+          value: 'Circus themed, tents and balloons, shadow animals performing on the tent wall, bright red and yellow, fun and mysterious'
+        },
+        {
+          label: '🚀 Fondo espacial infantil con cohete de cartón',
+          value: 'Child-friendly space, planets and stars, a cardboard rocket ship with a kid astronaut, dreamy, colorful sci-fi'
+        },
+        {
+          label: '🐱 Fondo de animales tiernos con ropa de chef',
+          value: 'Cute animal background, fluffy kittens and puppies wearing tiny chef hats and aprons, soft pastel colors, warm and funny'
+        },
+        {
+          label: '🎮 Fondo de videojuegos con pixel art vivo',
+          value: 'Video game themed, pixel art style, but the pixels move and change color, retro gaming, nostalgic, fun'
+        }
+      ]
+    },
+    {
+      label: '📸 Estudio Profesional (con estilo)',
+      options: [
+        {
+          label: '⬜ Fondo sólido monocromático con textura de polvo de estrellas',
+          value: 'Solid color seamless background, uniform surface but with tiny glittering star dust, clean minimalist, magical studio'
+        },
+        {
+          label: '🌫️ Fondo degradado con neblina animada',
+          value: 'Gradient background, smooth color transition, soft animated fog moving slowly, creates depth, modern'
+        },
+        {
+          label: '💡 Fondo con luz proyectada en formas de animales',
+          value: 'Background with projected light shapes, moving animal silhouettes, creative lighting design, whimsical aesthetic'
+        },
+        {
+          label: '✨ Fondo con brillo controlado que forma halos',
+          value: 'Solid background with controlled highlight areas, soft halos behind the subject, dimensional studio, angelic'
+        },
+        {
+          label: '⬛ Fondo negro profundo con estrellas tenues',
+          value: 'Deep black seamless background, pure black surface but with faint stars, dramatic studio, cosmic editorial'
+        },
+        {
+          label: '⬜ Fondo blanco limpio con sombras de color',
+          value: 'Clean white seamless background, pure white surface, but colored shadows (pink, blue), soft diffused lighting, creative commercial'
+        },
+        {
+          label: '🎭 Fondo de tela/textura con pliegues animados',
+          value: 'Fabric textured background, elegant drapes that move slowly as if breathing, classic portrait studio, living texture'
+        },
+        {
+          label: '🌈 Fondo de colores vibrantes con destellos prismáticos',
+          value: 'Vibrant colored background, bold saturated colors, prismatic flares and rainbow reflections, dynamic studio, fashion'
         }
       ]
     }
@@ -514,7 +527,10 @@
     { id: 'atmoGlow', label: '🟡 Brillo ambiental', value: 'soft ambient glow around the subject' },
     { id: 'atmoMist', label: '🌫️ Niebla densa', value: 'dense fog filling the scene' },
     { id: 'atmoLens', label: '✨ Destellos sutiles', value: 'subtle sparkles and glints in the air' },
-    { id: 'atmoAurora', label: '🌌 Aurora tenue', value: 'faint aurora streaks in the sky' }
+    { id: 'atmoAurora', label: '🌌 Aurora tenue', value: 'faint aurora streaks in the sky' },
+    { id: 'atmoBubbles', label: '🫧 Burbujas flotantes', value: 'soap bubbles floating and refracting light' },
+    { id: 'atmoConfetti', label: '🎉 Confetti lento', value: 'colorful confetti falling in slow motion' },
+    { id: 'atmoTears', label: '💧 Lágrimas ingrávidas', value: 'tear-shaped droplets floating in zero gravity' }
   ],
   lightingKey: [
     { label: '☀️ Golden hour (cálida)', value: 'warm golden hour sunlight from the right' },
@@ -541,7 +557,8 @@
     { label: '🧿 Luz cenital dura', value: 'hard top-down light creating strong shadows' },
     { label: '🪟 Luz por persianas', value: 'window blinds light stripes across subject' },
     { label: '🧊 Luz helada', value: 'icy blue light giving cold mood' },
-    { label: '🟡 Luz suave ambiental', value: 'soft ambient light wrapping the subject' }
+    { label: '🟡 Luz suave ambiental', value: 'soft ambient light wrapping the subject' },
+    { label: '💎 Luz de diamante (refracciones)', value: 'light refracting through crystal, rainbow caustics' }
   ],
   lightingTech: [
     { id: 'lightRim', label: '✨ Rim light (contra)', value: 'warm rim light from behind the subject' },
@@ -568,7 +585,8 @@
     { id: 'lightAmbient', label: '🌫️ Luz ambiental', value: 'ambient lighting dominating the scene' },
     { id: 'lightBack', label: '🔙 Contraluz', value: 'strong backlight for separation' },
     { id: 'lightNeon', label: '🟣 Neon doble', value: 'dual neon lighting with contrasting colors' },
-    { id: 'lightGodrays', label: '🌤️ God rays', value: 'visible god rays cutting through atmosphere' }
+    { id: 'lightGodrays', label: '🌤️ God rays', value: 'visible god rays cutting through atmosphere' },
+    { id: 'lightFairy', label: '🧚 Luz de hada puntual', value: 'tiny pinpoint fairy lights scattered' }
   ],
   styles: [
     { label: '📷 Fotografía hiperrealista', value: 'hyperrealistic photography' },
@@ -595,7 +613,8 @@
     { label: '🪞 Barroco', value: 'baroque painting style, ornate details' },
     { label: '🧂 Realismo mágico', value: 'magical realism with subtle fantasy elements' },
     { label: '🧊 HDR realista', value: 'HDR realistic photography, crisp detail' },
-    { label: '🖍️ Pastel', value: 'pastel illustration with soft gradients' }
+    { label: '🖍️ Pastel', value: 'pastel illustration with soft gradients' },
+    { label: '🕯️ Tenebrismo', value: 'tenebrism, extreme contrasts, theatrical darkness' }
   ],
   cameras: [
     { label: 'Canon EOS R5', value: 'shot on Canon EOS R5' },
@@ -703,7 +722,8 @@
     { label: '🟧 Terracota', value: 'terracotta and warm earth palette' },
     { label: '🟡 Lemon pop', value: 'yellow accents, fresh bright energy' },
     { label: '🟣 Royal purple', value: 'royal purple, deep violet, elegant highlights' },
-    { label: '🟩 Forest deep', value: 'deep forest greens, moss, dark browns' }
+    { label: '🟩 Forest deep', value: 'deep forest greens, moss, dark browns' },
+    { label: '🩷 Candy pastel', value: 'candy pastels, bubblegum pink, mint, baby blue' }
   ],
   moods: [
     { id: 'moodEerie', label: '👻 Eerie (inquietante)', value: 'eerie' },
@@ -730,7 +750,8 @@
     { id: 'moodApocalyptic', label: '☢️ Apocalyptic', value: 'apocalyptic and grim' },
     { id: 'moodEnergetic', label: '⚡ Energetic', value: 'energetic and intense' },
     { id: 'moodCalm', label: '🌙 Calm', value: 'calm and quiet' },
-    { id: 'moodMystic', label: '🔷 Mystic', value: 'mystic and spiritual' }
+    { id: 'moodMystic', label: '🔷 Mystic', value: 'mystic and spiritual' },
+    { id: 'moodBittersweet', label: '🍫 Bittersweet', value: 'bittersweet, happy and sad at once' }
   ],
   aspects: [
     { id: 'ar11', label: '⬜ 1:1', value: '--ar 1:1' },
