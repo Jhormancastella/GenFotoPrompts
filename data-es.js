@@ -3,7 +3,7 @@
  * Debe cargarse justo después de data.js.
  */
 (function () {
-  const D = window.GPROMPTS_DATA;
+  const D = window.GenFotoPrompts_DATA;
   if (!D) return;
 
   function byId(arr, map) {

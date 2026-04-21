@@ -298,7 +298,7 @@
 
     state.lastPrompt = $('#promptOutput').textContent;
     state.lastNegative = negOutput.textContent;
-    localStorage.setItem('GenPrompts:last', JSON.stringify(state));
+    localStorage.setItem('GenFotoPrompts:last', JSON.stringify(state));
   }
 
   function copyPrompt() {
@@ -348,7 +348,7 @@
   }
 
   function restoreState() {
-    const saved = localStorage.getItem('GenPrompts:last');
+    const saved = localStorage.getItem('GenFotoPrompts:last');
     if (!saved) return;
     try {
       const parsed = JSON.parse(saved);
@@ -462,7 +462,7 @@
   }
 
   function hydrateFromData() {
-    const data = window.GPROMPTS_DATA;
+    const data = window.GenFotoPrompts_DATA;
     if (!data) return;
 
     const mode = state.mode;
@@ -549,7 +549,7 @@
     $$('[data-lang]').forEach((btn) => {
       btn.addEventListener('click', () => {
         state.lang = btn.getAttribute('data-lang');
-        localStorage.setItem('GenPrompts:lang', state.lang);
+        localStorage.setItem('GenFotoPrompts:lang', state.lang);
         setActiveToggle('[data-lang]', state.lang, 'data-lang');
         applyI18n();
         hydrateFromData();
@@ -561,7 +561,7 @@
     $$('[data-mode]').forEach((btn) => {
       btn.addEventListener('click', () => {
         state.mode = btn.getAttribute('data-mode');
-        localStorage.setItem('GenPrompts:mode', state.mode);
+        localStorage.setItem('GenFotoPrompts:mode', state.mode);
         setActiveToggle('[data-mode]', state.mode, 'data-mode');
         hydrateFromData();
       });
@@ -571,7 +571,7 @@
   function setTheme(theme) {
     state.theme = theme;
     document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('GenPrompts:theme', theme);
+    localStorage.setItem('GenFotoPrompts:theme', theme);
     setActiveToggle('[data-theme]', theme, 'data-theme');
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
@@ -598,9 +598,9 @@
   }
 
   function init() {
-    const savedLang = localStorage.getItem('GenPrompts:lang');
-    const savedMode = localStorage.getItem('GenPrompts:mode');
-    const savedTheme = localStorage.getItem('GenPrompts:theme');
+    const savedLang = localStorage.getItem('GenFotoPrompts:lang');
+    const savedMode = localStorage.getItem('GenFotoPrompts:mode');
+    const savedTheme = localStorage.getItem('GenFotoPrompts:theme');
     if (savedLang) state.lang = savedLang;
     if (savedMode) state.mode = savedMode;
     if (savedTheme) state.theme = savedTheme;

@@ -1,5 +1,5 @@
 
-# 📸 GenPrompts
+# 📸 GenFotoPrompts
 
 ![Version](https://img.shields.io/badge/version-1.0-blue.svg)
 ![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=flat&logo=html5&logoColor=white)
@@ -10,8 +10,8 @@
 ## 🌐 Web en vivo
 
 <div align="center">
-  <a href="https://jhormancastella.github.io/GenPrompts/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_Ver_GenPrompts_En_Vivo-Click_Aquí-2EA043?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Ver GenPrompts en Vivo">
+  <a href="https://jhormancastella.github.io/GenFotoPrompts/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Ver_GenFotoPrompts_En_Vivo-Click_Aquí-2EA043?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Ver GenFotoPrompts en Vivo">
   </a>
 </div>
 
@@ -19,7 +19,7 @@
 
 ## 📖 Descripción
 
-**GenPrompts** es una herramienta web interactiva diseñada para generar **prompts profesionales** de imágenes para inteligencia artificial. Permite construir escenas detalladas seleccionando opciones organizadas por categorías: sujeto, fondo, atmósfera, iluminación, estilo, colores y mood. Además, adapta el resultado a diferentes plataformas de generación de imágenes.
+**GenFotoPrompts** es una herramienta web interactiva diseñada para generar **prompts profesionales** de imágenes para inteligencia artificial. Permite construir escenas detalladas seleccionando opciones organizadas por categorías: sujeto, fondo, atmósfera, iluminación, estilo, colores y mood. Además, adapta el resultado a diferentes plataformas de generación de imágenes.
 
 ---
 
@@ -65,7 +65,7 @@ flowchart TD
 📂 Estructura del proyecto
 
 ```
-GenPrompts/
+GenFotoPrompts/
 ├── index.html          # Página principal
 ├── style.css           # Estilos
 ├── app.js              # Lógica principal
@@ -79,12 +79,12 @@ GenPrompts/
 
 🚀 Uso local
 
-Sigue estos pasos para ejecutar GenPrompts en tu máquina:
+Sigue estos pasos para ejecutar GenFotoPrompts en tu máquina:
 
 1. Clona el repositorio
    ```bash
-   git clone https://github.com/jhormancastella/GenPrompts.git
-   cd GenPrompts
+   git clone https://github.com/jhormancastella/GenFotoPrompts.git
+   cd GenFotoPrompts
    ```
 2. Abre el proyecto
       Simplemente abre el archivo index.html en tu navegador favorito.
@@ -130,6 +130,4 @@ Si tienes preguntas o sugerencias, no dudes en abrir un issue en el repositorio 
 
 ---
 
-© 2026 GenPrompts – Hecho con ❤️ para la comunidad de IA generativa.
-
-```
+© 2026 GenFotoPrompts – Hecho con ❤️ para la comunidad de IA generativa.

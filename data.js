@@ -1,4 +1,4 @@
-window.GPROMPTS_DATA = {
+window.GenFotoPrompts_DATA = {
   backgroundPresets: [
     {
       label: '🎃 Halloween / Terror',
