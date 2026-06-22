@@ -32,6 +32,7 @@
       <img src="https://res.cloudinary.com/dipv76dpn/image/upload/v1774474727/a_logo_para_favicon_2_ezxoyv.png" alt="Logo de GenFotoPrompts" class="logo">
     </a>
     <div class="brand-text">
+      <span class="kicker" data-i18n="kicker">Prompt Studio</span>
       <a href="./" class="brand-link" aria-label="Inicio GenFotoPrompts">
         <h1>GenFotoPrompts</h1>
       </a>
@@ -136,7 +137,10 @@
       </div>
 
       <div id="bgPresetOptions">
-        <select id="bgSelect" class="compact-select"></select>
+        <p class="sub-label" data-i18n="bg_category">Categoría:</p>
+        <div class="category-tabs" id="bgCategoryTabs" role="tablist"></div>
+        <p class="sub-label" data-i18n="bg_scene">Escena:</p>
+        <div class="scene-buttons" id="bgSceneButtons"></div>
       </div>
 
       <input type="text" class="custom-input" id="bgText"
@@ -250,6 +254,33 @@
     <div class="section-content">
       <div class="radio-group" id="platformGroup"></div>
       <p class="tip" data-i18n="platform_tip">Cada plataforma interpreta el prompt distinto. Aquí ajustamos el formato final automáticamente.</p>
+    </div>
+  </div>
+
+  <!-- ========== NIVEL DE PROMPT ========== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="icon">🎚️</span>
+      <h2 data-i18n="section_level">NIVEL DE DETALLE</h2>
+      <span class="toggle-arrow open">▾</span>
+    </div>
+    <div class="section-content">
+      <p class="sub-label" data-i18n="level_label">Elige cuánto detalle incluir en el prompt:</p>
+      <div class="radio-group" id="levelGroup">
+        <div class="radio-option">
+          <input type="radio" name="level" id="levelLight" value="light">
+          <label for="levelLight" data-i18n="level_light">🍃 Ligero</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="level" id="levelDetailed" value="detailed" checked>
+          <label for="levelDetailed" data-i18n="level_detailed">📋 Detallado</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="level" id="levelUltra" value="ultra">
+          <label for="levelUltra" data-i18n="level_ultra">🚀 Ultra completo</label>
+        </div>
+      </div>
+      <p class="tip" data-i18n="level_tip">Ligero = esencial · Detallado = equilibrado · Ultra = datos técnicos avanzados (cámara, lente, iluminación, calidad).</p>
     </div>
   </div>
 

@@ -238,36 +238,36 @@ window.GenFotoPrompts_DATA = {
       label: '📸 Estudio / Foto (mejorado)',
       options: [
         {
-          label: '🎬 Estudio de cine profesional con humo de color',
-          value: 'Professional film studio, dark walls, softbox lighting, but colored smoke in pastel hues floating, reflective floor, cinematic'
+          label: '🎬 Estudio de retrato profesional con fondo gris',
+          value: 'Professional photography studio, dark walls, softbox lighting and reflective umbrellas, continuous neutral gray paper backdrop, matte floor, elegant and balanced lighting'
         },
         {
-          label: '📷 Estudio de fotografía con espejos rotos',
-          value: 'Classic photography studio, white cyclorama, but a wall of broken mirrors creating kaleidoscopic reflections, minimalist but chaotic'
+          label: '📷 Estudio de fotografía clásico y minimalista',
+          value: 'Classic photography studio, pristine white cyclorama, uniform high-key lighting, minimalist and clean setup, ideal for catalog photography or corporate portraits'
         },
         {
-          label: '💡 Estudio con luces de neón y una silla vacía',
-          value: 'Modern photo studio, neon tube lights, colored LED panels, a single empty chair in the center, creative and lonely'
+          label: '💡 Estudio moderno con taburete',
+          value: 'Modern photo studio, studio strobes with softboxes, a high wooden stool in the center against a beige or terracotta seamless background, warm mood for classic portrait'
         },
         {
-          label: '🪞 Estudio con espejos y proyecciones',
-          value: 'Photo studio with large mirrors, projectors casting moving abstract patterns on the walls, sleek design, infinite reflections'
+          label: '🪞 Estudio amplio con reflectores',
+          value: 'Spacious and tidy photo studio, white and silver reflector panels (V-flats), soft and natural bounced lighting, textured paper backdrop, professional and sober mood'
         },
         {
-          label: '🎪 Estudio de moda con maniquíes vivientes',
-          value: 'Fashion studio, runway platform, mannequins in poses that change when you blink, spotlights, glamorous and eerie'
+          label: '🎪 Estudio de moda con luz de belleza',
+          value: 'Professional fashion studio, white or light gray infinity cove, beauty dish frontal lighting to highlight textures, tripods and photography equipment visible on the edges, glamorous and clean mood'
         },
         {
-          label: '🖼️ Estudio con fondos de colores y sombras animadas',
-          value: 'Photo studio with colored paper backdrops, soft continuous lighting, but shadows on the wall move like silent films'
+          label: '🖼️ Estudio de catálogo con fondos de colores',
+          value: 'Photo studio with pastel paper backdrop rolls, soft continuous lighting, soft and defined shadows on the wall, standardized style for catalog photography (e-commerce)'
         },
         {
-          label: '📸 Rincón de productos con lupa gigante',
-          value: 'Product photography corner, white seamless background, a giant magnifying glass floating, softbox lighting, commercial but surreal'
+          label: '📸 Mesa de producto profesional',
+          value: 'Product photography table (still life), continuous curved white background, lightbox and small reflectors, precise macro lighting to highlight details, purely commercial style'
         },
         {
-          label: '🎭 Estudio con telón y piano invisible',
-          value: 'Studio with dramatic curtain backdrop, theatrical lighting, an invisible piano playing jazz, vintage and mysterious'
+          label: '🎭 Estudio dramático con luz Rembrandt',
+          value: 'Studio with dark fabric or hand-painted backdrop, a directional spotlight creating dramatic Rembrandt lighting, a classic leather seat, vintage, formal and elegant mood'
         }
       ]
     },
@@ -535,13 +535,13 @@ window.GenFotoPrompts_DATA = {
   lightingKey: [
     { label: '☀️ Golden hour (cálida)', value: 'warm golden hour sunlight from the right' },
     { label: '🌙 Luz de luna fría', value: 'cold blue moonlight from above' },
-    { label: '🪟 Luz natural de ventana', value: 'soft natural window light from the left' },
+    { label: '⛅ Luz natural de ventana', value: 'soft natural window light from the left' },
     { label: '🎭 Luz lateral dramática', value: 'dramatic side lighting from the left creating deep shadows' },
     { label: '🌤️ Sol cenital brillante', value: 'bright overhead tropical sunlight' },
     { label: '☁️ Luz difusa nublada', value: 'soft overcast diffused light from cloudy sky' },
     { label: '🌆 Luz neón urbana', value: 'neon colored light from signs and screens' },
     { label: '🕯️ Luz de vela/fuego', value: 'warm candlelight and firelight' },
-    { label: '🎨 Rembrandt lighting', value: 'Rembrandt lighting with key light at 45 degrees creating triangle on cheek' },
+    { label: '🖼️ Rembrandt lighting', value: 'Rembrandt lighting with key light at 45 degrees creating triangle on cheek' },
     { label: '🦋 Butterfly lighting', value: 'butterfly lighting from above creating shadow under nose' },
     { label: '💡 Luz de softbox', value: 'large softbox light, even and soft' },
     { label: '📸 Flash de estudio', value: 'studio strobe flash lighting' },
@@ -554,8 +554,8 @@ window.GenFotoPrompts_DATA = {
     { label: '🕯️ Luz de chimenea', value: 'fireplace light flickering warmly' },
     { label: '🎪 Luz de escenario', value: 'theater spotlight from above' },
     { label: '🪩 Luz de discoteca', value: 'colorful dance floor spotlights' },
-    { label: '🧿 Luz cenital dura', value: 'hard top-down light creating strong shadows' },
-    { label: '🪟 Luz por persianas', value: 'window blinds light stripes across subject' },
+    { label: '🔆 Luz cenital dura', value: 'hard top-down light creating strong shadows' },
+    { label: '🔳 Luz por persianas', value: 'window blinds light stripes across subject' },
     { label: '🧊 Luz helada', value: 'icy blue light giving cold mood' },
     { label: '🟡 Luz suave ambiental', value: 'soft ambient light wrapping the subject' },
     { label: '💎 Luz de diamante (refracciones)', value: 'light refracting through crystal, rainbow caustics' }
@@ -570,16 +570,16 @@ window.GenFotoPrompts_DATA = {
     { id: 'lightDappled', label: '🍃 Luz filtrada por hojas', value: 'dappled light pattern through leaves or branches' },
     { id: 'lightHard', label: '🔶 Luz dura', value: 'hard light creating sharp shadows' },
     { id: 'lightSoft', label: '🔷 Luz suave', value: 'soft light with smooth transitions' },
-    { id: 'lightSplit', label: '⚫ Split lighting', value: 'split lighting dividing face into light and shadow' },
-    { id: 'lightShort', label: '📐 Short lighting', value: 'short lighting emphasizing facial contours' },
-    { id: 'lightBroad', label: '📏 Broad lighting', value: 'broad lighting filling the face evenly' },
+    { id: 'lightSplit', label: '🌗 Split lighting', value: 'split lighting dividing face into light and shadow' },
+    { id: 'lightShort', label: '🌒 Short lighting', value: 'short lighting emphasizing facial contours' },
+    { id: 'lightBroad', label: '🌔 Broad lighting', value: 'broad lighting filling the face evenly' },
     { id: 'lightGels', label: '🎨 Gel de color', value: 'colored gel lighting for stylized tones' },
     { id: 'lightBounce', label: '↩️ Luz rebotada', value: 'bounce light filling shadows softly' },
     { id: 'lightFill', label: '💡 Fill light', value: 'fill light to reduce harsh shadows' },
     { id: 'lightPractical', label: '🕯️ Luz práctica', value: 'practical lights visible in the scene' },
     { id: 'lightSilhouette', label: '🖤 Silueta', value: 'silhouette lighting with backlight only' },
     { id: 'lightEdge', label: '✨ Edge light', value: 'edge light outlining the subject' },
-    { id: 'lightClamshell', label: '🦪 Clamshell', value: 'clamshell lighting with top and bottom light' },
+    { id: 'lightClamshell', label: '🐚 Clamshell', value: 'clamshell lighting with top and bottom light' },
     { id: 'lightFlat', label: '⚪ Luz plana', value: 'flat lighting with minimal contrast' },
     { id: 'lightMotivated', label: '🎬 Luz motivada', value: 'motivated lighting based on scene sources' },
     { id: 'lightAmbient', label: '🌫️ Luz ambiental', value: 'ambient lighting dominating the scene' },
@@ -601,18 +601,18 @@ window.GenFotoPrompts_DATA = {
     { label: '⚔️ Fantasy art', value: 'dark fantasy art, highly detailed digital painting' },
     { label: '🎮 Concept art', value: 'concept art, matte painting style' },
     { label: '📼 Foto vintage (film)', value: 'vintage film photograph, Kodak Portra 400 film grain' },
-    { label: '🧊 Low poly', value: 'low poly 3D style, clean geometry' },
-    { label: '🧷 Minimalista', value: 'minimalist composition, clean shapes' },
+    { label: '🔺 Low poly', value: 'low poly 3D style, clean geometry' },
+    { label: '⬛ Minimalista', value: 'minimalist composition, clean shapes' },
     { label: '🖋️ Tinta / Ink', value: 'ink illustration with bold lines' },
-    { label: '🧴 Flat design', value: 'flat design, vector style' },
+    { label: '🎨 Flat design', value: 'flat design, vector style' },
     { label: '🟦 Isométrico', value: 'isometric illustration, clean perspective' },
-    { label: '🧵 Collage', value: 'mixed media collage, layered textures' },
-    { label: '🪵 Grano de película', value: 'film grain, analog texture' },
+    { label: '🧩 Collage', value: 'mixed media collage, layered textures' },
+    { label: '🎞️ Grano de película', value: 'film grain, analog texture' },
     { label: '🕵️ Noir', value: 'noir photography, high contrast shadows' },
     { label: '🌈 Surreal', value: 'surreal dreamlike visual style' },
     { label: '🪞 Barroco', value: 'baroque painting style, ornate details' },
-    { label: '🧂 Realismo mágico', value: 'magical realism with subtle fantasy elements' },
-    { label: '🧊 HDR realista', value: 'HDR realistic photography, crisp detail' },
+    { label: '🪄 Realismo mágico', value: 'magical realism with subtle fantasy elements' },
+    { label: '📸 HDR realista', value: 'HDR realistic photography, crisp detail' },
     { label: '🖍️ Pastel', value: 'pastel illustration with soft gradients' },
     { label: '🕯️ Tenebrismo', value: 'tenebrism, extreme contrasts, theatrical darkness' }
   ],
@@ -755,56 +755,28 @@ window.GenFotoPrompts_DATA = {
   ],
   aspects: [
     { id: 'ar11', label: '⬜ 1:1', value: '--ar 1:1' },
+    { id: 'ar45', label: '📷 4:5', value: '--ar 4:5' },
+    { id: 'ar23', label: '🖼️ 2:3', value: '--ar 2:3' },
     { id: 'ar34', label: '📱 3:4', value: '--ar 3:4', checked: true },
-    { id: 'ar43', label: '🖥️ 4:3', value: '--ar 4:3' },
     { id: 'ar916', label: '📱 9:16', value: '--ar 9:16' },
+    { id: 'ar32', label: '🖼️ 3:2', value: '--ar 3:2' },
+    { id: 'ar43', label: '🖥️ 4:3', value: '--ar 4:3' },
     { id: 'ar169', label: '🎬 16:9', value: '--ar 16:9' },
     { id: 'ar219', label: '🎞️ 21:9', value: '--ar 21:9' },
-    { id: 'ar32', label: '🖼️ 3:2', value: '--ar 3:2' },
-    { id: 'ar23', label: '📷 2:3', value: '--ar 2:3' },
-    { id: 'ar54', label: '🧾 5:4', value: '--ar 5:4' },
-    { id: 'ar45', label: '📄 4:5', value: '--ar 4:5' },
-    { id: 'ar21', label: '📺 2:1', value: '--ar 2:1' },
-    { id: 'ar12', label: '📱 1:2', value: '--ar 1:2' },
-    { id: 'ar52', label: '🧷 5:2', value: '--ar 5:2' },
-    { id: 'ar25', label: '🧷 2:5', value: '--ar 2:5' },
-    { id: 'ar73', label: '🗂️ 7:3', value: '--ar 7:3' },
-    { id: 'ar37', label: '🗂️ 3:7', value: '--ar 3:7' },
-    { id: 'ar85', label: '📐 8:5', value: '--ar 8:5' },
-    { id: 'ar58', label: '📐 5:8', value: '--ar 5:8' },
-    { id: 'ar1116', label: '🖥️ 11:16', value: '--ar 11:16' },
-    { id: 'ar1611', label: '📱 16:11', value: '--ar 16:11' },
-    { id: 'ar32t', label: '🧾 3:2 (foto)', value: '--ar 3:2' },
-    { id: 'ar24', label: '🎥 2:4', value: '--ar 2:4' },
-    { id: 'ar412', label: '📱 4:12', value: '--ar 4:12' },
-    { id: 'ar121', label: '🧩 12:1', value: '--ar 12:1' },
-    { id: 'ar19', label: '🎞️ 1:9', value: '--ar 1:9' }
+    { id: 'ar21', label: '📺 2:1', value: '--ar 2:1' }
   ],
   platforms: [
     { id: 'platMJ', label: 'Midjourney', value: 'midjourney', checked: true },
     { id: 'platSD', label: 'Stable Diffusion', value: 'stable' },
-    { id: 'platDalle', label: 'DALL-E', value: 'dalle' },
-    { id: 'platGeneric', label: 'Genérico', value: 'generic' },
+    { id: 'platDalle', label: 'DALL·E 3', value: 'dalle' },
+    { id: 'platFlux', label: 'FLUX', value: 'flux' },
+    { id: 'platIdeogram', label: 'Ideogram', value: 'ideogram' },
     { id: 'platLeonardo', label: 'Leonardo AI', value: 'leonardo' },
     { id: 'platFirefly', label: 'Adobe Firefly', value: 'firefly' },
-    { id: 'platIdeogram', label: 'Ideogram', value: 'ideogram' },
-    { id: 'platKrea', label: 'Krea', value: 'krea' },
     { id: 'platRunway', label: 'Runway', value: 'runway' },
+    { id: 'platKrea', label: 'Krea', value: 'krea' },
     { id: 'platPlayground', label: 'Playground', value: 'playground' },
     { id: 'platNightCafe', label: 'NightCafe', value: 'nightcafe' },
-    { id: 'platDreamStudio', label: 'DreamStudio', value: 'dreamstudio' },
-    { id: 'platMage', label: 'Mage', value: 'mage' },
-    { id: 'platBing', label: 'Bing Image Creator', value: 'bing' },
-    { id: 'platCanva', label: 'Canva AI', value: 'canva' },
-    { id: 'platFlux', label: 'FLUX', value: 'flux' },
-    { id: 'platImagen', label: 'Imagen', value: 'imagen' },
-    { id: 'platPixArt', label: 'PixArt', value: 'pixart' },
-    { id: 'platSDXL', label: 'Stable Diffusion XL', value: 'sdxl' },
-    { id: 'platKandinsky', label: 'Kandinsky', value: 'kandinsky' },
-    { id: 'platArtbreeder', label: 'Artbreeder', value: 'artbreeder' },
-    { id: 'platPhotoAI', label: 'Photo AI', value: 'photoai' },
-    { id: 'platDreamlike', label: 'Dreamlike', value: 'dreamlike' },
-    { id: 'platHotpot', label: 'Hotpot', value: 'hotpot' },
-    { id: 'platDeepAI', label: 'DeepAI', value: 'deepai' }
+    { id: 'platGeneric', label: 'Genérico', value: 'generic' }
   ]
 };

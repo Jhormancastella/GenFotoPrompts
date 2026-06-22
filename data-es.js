@@ -46,7 +46,10 @@
     atmoGlow: 'brillo ambiental suave alrededor del sujeto',
     atmoMist: 'niebla densa llenando la escena',
     atmoLens: 'destellos y reflejos sutiles en el aire',
-    atmoAurora: 'tenues franjas de aurora en el cielo'
+    atmoAurora: 'tenues franjas de aurora en el cielo',
+    atmoBubbles: 'burbujas de jabón flotando y refractando la luz',
+    atmoConfetti: 'confeti de colores cayendo en cámara lenta',
+    atmoTears: 'gotas con forma de lágrima flotando en ingravidez'
   });
 
   (function patchLightingKey() {
@@ -78,7 +81,8 @@
       'hard top-down light creating strong shadows': 'luz cenital dura con sombras fuertes',
       'window blinds light stripes across subject': 'franjas de luz de persianas cruzando al sujeto',
       'icy blue light giving cold mood': 'luz helada azulada con ambiente frío',
-      'soft ambient light wrapping the subject': 'luz ambiental suave envolviendo al sujeto'
+      'soft ambient light wrapping the subject': 'luz ambiental suave envolviendo al sujeto',
+      'light refracting through crystal, rainbow caustics': 'luz refractándose a través de cristal, cáusticas de arcoíris'
     };
     D.lightingKey.forEach((o) => {
       if (map[o.value]) o.valueEs = map[o.value];
@@ -110,7 +114,8 @@
     lightAmbient: 'luz ambiental dominando la escena',
     lightBack: 'contraluz fuerte para separar al sujeto',
     lightNeon: 'doble iluminación de neón con colores contrastados',
-    lightGodrays: 'rayos crepusculares visibles atravesando la atmósfera'
+    lightGodrays: 'rayos crepusculares visibles atravesando la atmósfera',
+    lightFairy: 'luces puntuales diminutas de hada esparcidas'
   });
 
   (function patchStyles() {
@@ -140,7 +145,8 @@
       'baroque painting style, ornate details': 'estilo barroco, detalles ornamentados',
       'magical realism with subtle fantasy elements': 'realismo mágico con toques fantásticos sutiles',
       'HDR realistic photography, crisp detail': 'fotografía HDR realista, detalle nítido',
-      'pastel illustration with soft gradients': 'ilustración pastel con degradados suaves'
+      'pastel illustration with soft gradients': 'ilustración pastel con degradados suaves',
+      'tenebrism, extreme contrasts, theatrical darkness': 'tenebrismo, contrastes extremos, oscuridad teatral'
     };
     D.styles.forEach((o) => {
       if (map[o.value]) o.valueEs = map[o.value];
@@ -256,7 +262,8 @@
     'terracota y paleta tierra cálida',
     'acentos amarillos, energía luminosa',
     'púrpura real, violeta profundo, brillos elegantes',
-    'verdes bosque profundos, musgo, marrones oscuros'
+    'verdes bosque profundos, musgo, marrones oscuros',
+    'pasteles caramelo, rosa chicle, menta, azul bebé'
   ]);
 
   byId(D.moods, {
@@ -284,7 +291,8 @@
     moodApocalyptic: 'apocalíptico y sombrío',
     moodEnergetic: 'enérgico e intenso',
     moodCalm: 'calmado y silencioso',
-    moodMystic: 'místico y espiritual'
+    moodMystic: 'místico y espiritual',
+    moodBittersweet: 'agridulce, feliz y triste a la vez'
   });
 
   applyOrder(
@@ -321,7 +329,79 @@
       'interior de teatro de ópera vintage, asientos de terciopelo rojo, ornamentación dorada, luces de escena dramáticas, atmósfera elegante',
       'sendero forestal cubierto de hojas rojas y doradas, arces y robles otoñales, puente de madera sobre arroyo, luz cálida filtrada',
       'cabaña rural acogedora con techo de paja, árboles otoñales, calabazas en el patio, muro de piedra con hiedra rojiza, humo de chimenea',
-      'parque urbano en otoño, hojas doradas arremolinándose, bancos con luz cálida, atardecer suave, calma'
+      'parque urbano en otoño, hojas doradas arremolinándose, bancos con luz cálida, atardecer suave, calma',
+      'Un teléfono rojo de disco antiguo sonando solo en un campo de lavanda al atardecer, atmósfera misteriosa, hiperrealista, poca profundidad de campo',
+      'Biblioteca abandonada donde los libros flotan y brillan con luz azul suave, partículas de polvo, realismo mágico, iluminación volumétrica',
+      'Astronauta de juguete tirado en un arenero con un charco que refleja una nebulosa estrellada, mundo en miniatura, enfoque tilt-shift, onírico',
+      'Decoración de cumpleaños infantil en una mansión gótica en ruinas, globos coloridos y telarañas, claroscuro dramático, alegría inquietante',
+      'Callejón cyberpunk lluvioso con un único puesto de flores vintage brillando cálido, reflejos de neón en pétalos mojados, contraste cinematográfico',
+      'Una cena romántica para dos servida dentro de un antiguo templo en ruinas, estrellas visibles a través del techo roto, enredaderas silvestres, íntimo',
+      'Un club nocturno vacío y oscuro con un solo bebé llorando en una cuna en la pista de baile, la bola de discoteca aún girando, melancólico',
+      'Una sala de hospital abandonada, un solo birrete de graduación y diploma sobre una camilla polvorienta, luz del sol por ventanas rotas, decadencia esperanzadora',
+      'Una novia con vestido blanco de pie en un campo de batalla embarrado y humeante, sosteniendo un ramo de flores marchitas, cielo dramático',
+      'Un viejo parque de atracciones de noche, un pequeño robot sentado en un carrusel, lágrimas de aceite cayendo, luces de neón parpadeando',
+      'Un dormitorio oscuro iluminado solo por una pecera con medusas bioluminiscentes, brillo suave azul y rosa en las paredes, acogedor y surrealista',
+      'Bosque de noche, los rayos de luna crean senderos brillantes en el suelo, las luciérnagas siguen los rastros de luz, mágico',
+      'Callejón de mercado nocturno, toda la luz proviene de farolillos de papel rojo, todo lo demás en sombra azul profunda, misterioso y vibrante',
+      'Una persona sosteniendo una linterna, el haz no ilumina el suelo sino pequeñas estrellas y constelaciones en el suelo, cósmico',
+      'Estudio de fotografía profesional, paredes oscuras, iluminación de softbox y paraguas reflectantes, fondo de papel continuo en tono gris neutro, suelo mate, iluminación elegante y equilibrada',
+      'Estudio de fotografía clásico, ciclorama blanco impecable, iluminación uniforme de alta clave (high-key), configuración minimalista y limpia, ideal para fotografía de catálogo o retratos corporativos',
+      'Estudio fotográfico moderno, flashes de estudio con ventanas de luz, un taburete alto de madera en el centro frente a un fondo unicolor beige o terracota, ambiente cálido para retrato clásico',
+      'Estudio fotográfico amplio y ordenado, paneles reflectores blancos y plateados (V-flats), iluminación rebotada suave y natural, fondo de papel texturizado, ambiente profesional y sobrio',
+      'Estudio de moda profesional, fondo infinito blanco o gris claro, iluminación frontal tipo beauty dish (luz de belleza) para resaltar texturas, trípodes y equipos de fotografía visibles en los bordes, ambiente glamoroso y limpio',
+      'Estudio fotográfico con rollos de fondos de papel en tonos pastel, iluminación continua suave, sombras suaves y definidas en la pared, estilo estandarizado para fotografía de catálogo (e-commerce)',
+      'Mesa de fotografía de producto (bodegón), fondo blanco continuo en curva, caja de luz (lightbox) y reflectores pequeños, iluminación macro precisa para destacar detalles, estilo puramente comercial',
+      'Estudio con telón de fondo de tela oscura o pintada a mano, un foco direccional creando iluminación dramática tipo Rembrandt, un asiento clásico de cuero, ambiente vintage, formal y elegante',
+      'Parque urbano, árboles altos y verdes, pero un árbol tiene docenas de ojos en su tronco, observando, luz solar de la tarde, calma inquietante',
+      'Jardín botánico, plantas exóticas, estatuas de mármol que parecen respirar (el pecho se mueve ligeramente), senderos de piedra, apacible pero vivo',
+      'Bosque urbano, árboles densos, radios antiguas vintage colgando de las ramas emitiendo estática, luz natural filtrándose, nostálgico',
+      'Jardín público, parterres de flores coloridas, cada flor emite un suave tono de campana cuando sopla el viento, primavera, realismo mágico',
+      'Parque con un pequeño lago, un barco de papiroflexia gigante flotando, patos nadando a su alrededor, sauces, surrealista y apacible',
+      'Jardín tropical exuberante, grandes palmeras, mariposas de vidrio de colores volando, la luz del sol creando sombras coloreadas',
+      'Jardín zen japonés, patrones rastrillados en la arena que cambian solos, rocas cubiertas de musgo, valla de bambú, meditativo pero inquietante',
+      'Campo de girasoles, un reloj de sol gigante de piedra en el centro, la sombra se mueve hacia atrás, luz cálida de verano, anomalía temporal',
+      'Sala de estar moderna, sofá cómodo flotando unos centímetros sobre el suelo, mesa de centro con libros levitando, luz natural, calma surrealista',
+      'Dormitorio, ventana grande, pero fuera hay un paisaje alienígena con dos soles, cama suave, iluminación cálida, ciencia ficción acogedora',
+      'Cocina acogedora, armarios de madera, el frigorífico y la tostadora tienen caras monas y están charlando, iluminación cálida, caprichoso',
+      'Oficina en casa, estantería, escritorio, retratos en la pared que te saludan con la mano, atmósfera cálida y productiva, mágico',
+      'Baño elegante, superficies de mármol, el agua de la bañera brilla con luz dorada suave, plantas, tipo spa y místico',
+      'Comedor familiar, mesa de madera, platos y cubiertos se colocan solos, iluminación cálida, vista a la ventana, hogar mágico',
+      'Terraza, plantas en macetas que tararean melodías suaves, luces de cuerda, vista urbana, relajado y encantado',
+      'Habitación acogedora con chimenea, llamas que danzan formando figuras de animales, iluminación cálida, muebles cómodos, íntimo y mágico',
+      'Calle concurrida, cafeterías al aire libre, una máquina de escribir pública en una mesa pequeña con un cartel "escribe tu secreto", luz cálida de la tarde',
+      'Calle comercial concurrida, escaparates, un maniquí cambia de pose cada pocos segundos, nadie lo nota, vida urbana dinámica',
+      'Mercado local, puestos de productos frescos, un loro en una jaula que predice el futuro por una moneda, bullicioso, auténtico y mágico',
+      'Andén de estación de tren, panel de salidas, un gran reloj que va hacia atrás, viajeros, detalles arquitectónicos, ambiente de viaje en el tiempo',
+      'Andén de tren urbano al atardecer, una vieja maleta con pegatinas de ciudades ficticias, luz dorada suave, misterioso',
+      'Calle con murales coloridos, los personajes pintados se mueven ligeramente, arte urbano en muros, creativo, vibrante y vivo',
+      'Obra de construcción urbana, andamios, una grúa sosteniendo una enorme luna falsa de utilería, horizonte de la ciudad, surrealista industrial',
+      'Plaza de la ciudad de noche, iluminación ambiental, pero cada farola proyecta una constelación distinta en el suelo, silencioso y cósmico',
+      'Oficina corporativa, paredes de cristal, mobiliario moderno, pero peces coloridos nadan en el aire, luz natural brillante, lugar de trabajo surrealista',
+      'Clínica médica, superficies limpias, equipamiento moderno, un esqueleto con bata de médico sosteniendo un portapapeles, estéril pero humorístico',
+      'Sala de juntas, mesa grande, sillas, pantalla de presentación, pero un elefante invisible deja huellas en la alfombra, sátira empresarial',
+      'Aula universitaria, pupitres, pizarra, tiza escribiendo fórmulas matemáticas sola, luz natural, magia académica',
+      'Banco, suelos de mármol, escritorios profesionales, un viejo cofre del tesoro medio abierto con monedas de oro en medio del vestíbulo, formal pero pirata',
+      'Terminal de aeropuerto, grandes ventanales, paneles de salidas que listan ciudades como la Atlántida y Narnia, viajeros, diseño moderno',
+      'Pasillo de hospital moderno, paredes blancas limpias, plantas luminosas en macetas que emiten luz curativa, iluminación suave, esperanzador',
+      'Sala de conciertos, escenario, butacas, un violín flotando y tocando un solo, iluminación dramática, paneles acústicos, artístico y mágico',
+      'Fondo de dibujos animados colorido, dibujos de estrellas y formas que saltan del papel, juguetón, vibrante, sensación interactiva',
+      'Tema de superhéroes, estilo cómic, una capa de tela real flotando al viento, colores vivos, iluminación dramática',
+      'Tema de princesas, elementos de castillo, un espejo mágico que habla y hace muecas graciosas, rosa y púrpura brillante, cuento de hadas',
+      'Tema de dinosaurios, jungla prehistórica, huellas de dinosaurio brillando en el suelo, aventurero, tonos verdes y marrones',
+      'Tema de unicornios, arcoíris y brillillos, nubes de algodón de azúcar, colores pastel, mágico, caprichoso',
+      'Castillo de cuento, torres y banderas, un dragón robot amistoso sentado en el muro, majestuoso pero de ciencia ficción',
+      'Tema de circo, carpas y globos, animales de sombra actuando en la pared de la carpa, rojo y amarillo brillante, divertido y misterioso',
+      'Espacio infantil, planetas y estrellas, un cohete de cartón con un niño astronauta, onírico, ciencia ficción colorida',
+      'Fondo de animales tiernos, gatitos y cachorros esponjosos con gorros de chef diminutos y delantales, colores pastel suaves, cálido y divertido',
+      'Tema de videojuegos, estilo pixel art, pero los píxeles se mueven y cambian de color, juego retro, nostálgico, divertido',
+      'Fondo liso de color sólido, superficie uniforme pero con polvo de estrellas diminuto brillando, minimalista limpio, estudio mágico',
+      'Fondo degradado, transición de color suave, niebla animada suave moviéndose lentamente, crea profundidad, moderno',
+      'Fondo con formas de luz proyectadas, siluetas de animales en movimiento, diseño de iluminación creativo, estética caprichosa',
+      'Fondo sólido con áreas de brillo controlado, halos suaves detrás del sujeto, estudio dimensional, angélico',
+      'Fondo negro profundo continuo, superficie negra pura pero con estrellas tenues, estudio dramático, editorial cósmico',
+      'Fondo blanco limpio continuo, superficie blanca pura, pero sombras de colores (rosa, azul), iluminación difusa suave, comercial creativo',
+      'Fondo de textura de tela, cortinas elegantes que se mueven lentamente como si respiraran, estudio de retrato clásico, textura viva',
+      'Fondo de colores vibrantes, colores saturados y audaces, destellos prismáticos y reflejos de arcoíris, estudio dinámico, moda'
     ]
   );
 })();

@@ -7,12 +7,17 @@
     lastNegative: '',
     lang: 'es',
     mode: 'basic',
-    theme: 'dark'
+    theme: 'dark',
+    bgCategory: 0,
+    bgScene: '',
+    bgSceneIndex: -1,
+    level: 'detailed'
   };
 
   const I18N = {
     es: {
       slogan: 'Domina la IA, no luches con ella. Prompts precisos para resultados épicos.',
+      kicker: 'Prompt Studio',
       mode_basic: 'Básico',
       mode_advanced: 'Avanzado',
       guide_title: 'GUÍA RÁPIDA (2 MIN)',
@@ -31,6 +36,15 @@
       bg_preset: '🎭 Preset temático',
       bg_custom: '✏️ Personalizado',
       bg_placeholder: 'Describe el fondo con detalle: lugar, elementos, hora del día...',
+      bg_category: 'Categoría:',
+      bg_scene: 'Escena:',
+      bg_scene_none: 'Selecciona una escena…',
+      section_level: 'NIVEL DE DETALLE',
+      level_label: 'Elige cuánto detalle incluir en el prompt:',
+      level_light: '🍃 Ligero',
+      level_detailed: '📋 Detallado',
+      level_ultra: '🚀 Ultra completo',
+      level_tip: 'Ligero = esencial · Detallado = equilibrado · Ultra = datos técnicos avanzados (cámara, lente, iluminación, calidad).',
       section_atmosphere: 'ATMÓSFERA / EFECTOS',
       atmo_label: 'Selecciona uno o más efectos (multi-selección):',
       atmo_placeholder: '(Opcional) Añade efectos adicionales personalizados...',
@@ -59,6 +73,7 @@
     },
     en: {
       slogan: 'Master AI, don\'t wrestle with it. Precise prompts for epic results.',
+      kicker: 'Prompt Studio',
       mode_basic: 'Basic',
       mode_advanced: 'Advanced',
       guide_title: 'QUICK GUIDE (2 MIN)',
@@ -77,6 +92,15 @@
       bg_preset: '🎭 Themed preset',
       bg_custom: '✏️ Custom',
       bg_placeholder: 'Describe the background in detail: place, elements, time of day...',
+      bg_category: 'Category:',
+      bg_scene: 'Scene:',
+      bg_scene_none: 'Select a scene…',
+      section_level: 'DETAIL LEVEL',
+      level_label: 'Choose how much detail to include in the prompt:',
+      level_light: '🍃 Light',
+      level_detailed: '📋 Detailed',
+      level_ultra: '🚀 Ultra complete',
+      level_tip: 'Light = essential · Detailed = balanced · Ultra = advanced technical data (camera, lens, lighting, quality).',
       section_atmosphere: 'ATMOSPHERE / EFFECTS',
       atmo_label: 'Select one or more effects (multi-select):',
       atmo_placeholder: '(Optional) Add custom effects...',
@@ -175,6 +199,64 @@
     $('#bgText').style.display = bgMode === 'custom' ? 'block' : 'none';
   }
 
+  function renderBackgroundCategories() {
+    const data = window.GenFotoPrompts_DATA;
+    if (!data) return;
+    if (state.bgCategory >= data.backgroundPresets.length) state.bgCategory = 0;
+    const tabsEl = $('#bgCategoryTabs');
+    tabsEl.innerHTML = '';
+    data.backgroundPresets.forEach((group, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'category-tab' + (idx === state.bgCategory ? ' is-active' : '');
+      btn.textContent = group.label;
+      btn.setAttribute('data-cat', idx);
+      btn.addEventListener('click', () => {
+        state.bgCategory = idx;
+        state.bgSceneIndex = -1;
+        state.bgScene = '';
+        renderBackgroundCategories();
+        renderBackgroundScenes();
+      });
+      tabsEl.appendChild(btn);
+    });
+  }
+
+  function renderBackgroundScenes() {
+    const data = window.GenFotoPrompts_DATA;
+    if (!data) return;
+    const group = data.backgroundPresets[state.bgCategory];
+    const scenesEl = $('#bgSceneButtons');
+    scenesEl.innerHTML = '';
+    if (!group) return;
+    if (state.bgSceneIndex === undefined) state.bgSceneIndex = -1;
+    if (state.bgSceneIndex >= group.options.length) state.bgSceneIndex = -1;
+
+    group.options.forEach((opt, idx) => {
+      const val = promptValue(opt);
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'scene-btn' + (idx === state.bgSceneIndex ? ' is-selected' : '');
+
+      const label = document.createElement('span');
+      label.className = 'scene-label';
+      label.textContent = opt.label;
+
+      const desc = document.createElement('span');
+      desc.className = 'scene-desc';
+      desc.textContent = val;
+
+      btn.appendChild(label);
+      btn.appendChild(desc);
+      btn.addEventListener('click', () => {
+        state.bgSceneIndex = idx;
+        state.bgScene = val;
+        renderBackgroundScenes();
+      });
+      scenesEl.appendChild(btn);
+    });
+  }
+
   function getCheckedValues(selector) {
     return $$(selector + ':checked').map((el) => el.value);
   }
@@ -190,8 +272,10 @@
 
   function buildPrompt() {
     const P = getPromptBundle();
+    const level = state.level;
     const parts = [];
 
+    // --- Subject (always present) ---
     const subjectMode = $('input[name="subject"]:checked').value;
     if (subjectMode === 'keep') {
       parts.push(P.subject_keep);
@@ -200,50 +284,64 @@
       if (customSubject) parts.push(customSubject + '.');
     }
 
+    // --- Background (always present) ---
     const bgMode = $('input[name="background"]:checked').value;
     if (bgMode === 'keep') {
       parts.push(P.bg_keep);
     } else if (bgMode === 'preset') {
-      const bgVal = $('#bgSelect').value;
-      if (bgVal) parts.push(P.bg_prefix + ' ' + bgVal + '.');
+      if (state.bgScene) parts.push(P.bg_prefix + ' ' + state.bgScene + '.');
     } else {
       const bgCustom = $('#bgText').value.trim();
       if (bgCustom) parts.push(P.bg_prefix + ' ' + bgCustom + '.');
     }
 
-    const atmoEffects = getCheckedValues('[data-group="atmosphere"] input[type="checkbox"]');
-    const atmoCustom = $('#atmoCustom').value.trim();
-    const atmoAll = atmoCustom ? atmoEffects.concat([atmoCustom]) : atmoEffects;
-    const atmoSentence = joinSentence(P.atmo_prefix, atmoAll);
-    if (atmoSentence) parts.push(atmoSentence);
+    // Detailed + Ultra: atmosphere
+    if (level === 'detailed' || level === 'ultra') {
+      const atmoEffects = getCheckedValues('[data-group="atmosphere"] input[type="checkbox"]');
+      const atmoCustom = $('#atmoCustom').value.trim();
+      const atmoAll = atmoCustom ? atmoEffects.concat([atmoCustom]) : atmoEffects;
+      const atmoSentence = joinSentence(P.atmo_prefix, atmoAll);
+      if (atmoSentence) parts.push(atmoSentence);
+    }
 
-    const keyLight = $('#keyLight').value;
-    const lightEffects = getCheckedValues('[data-group="lighting"] input[type="checkbox"]');
-    const lightAll = [];
-    if (keyLight) lightAll.push(keyLight + P.key_light_suffix);
-    lightAll.push(...lightEffects);
-    const lightSentence = joinSentence(P.light_prefix, lightAll);
-    if (lightSentence) parts.push(lightSentence);
+    // Ultra: lighting (key + technique)
+    if (level === 'ultra') {
+      const keyLight = $('#keyLight').value;
+      const lightEffects = getCheckedValues('[data-group="lighting"] input[type="checkbox"]');
+      const lightAll = [];
+      if (keyLight) lightAll.push(keyLight + P.key_light_suffix);
+      lightAll.push(...lightEffects);
+      const lightSentence = joinSentence(P.light_prefix, lightAll);
+      if (lightSentence) parts.push(lightSentence);
+    }
 
+    // Detailed: style (medium only). Ultra: style + camera + lens + quality.
     const style = $('#styleSelect').value;
-    const camera = $('#cameraSelect').value;
-    const lens = $('#lensSelect').value;
-    const qualityOpts = getCheckedValues('[data-group="quality"] input[type="checkbox"]');
+    if (level === 'detailed') {
+      if (style) parts.push(style + '.');
+    } else if (level === 'ultra') {
+      const camera = $('#cameraSelect').value;
+      const lens = $('#lensSelect').value;
+      const qualityOpts = getCheckedValues('[data-group="quality"] input[type="checkbox"]');
+      const styleAll = [style].filter(Boolean);
+      if (camera) styleAll.push(camera);
+      if (lens) styleAll.push(lens);
+      styleAll.push(...qualityOpts);
+      if (styleAll.length > 0) parts.push(styleAll.join(', ') + '.');
+    }
 
-    const styleAll = [style].filter(Boolean);
-    if (camera) styleAll.push(camera);
-    if (lens) styleAll.push(lens);
-    styleAll.push(...qualityOpts);
-    if (styleAll.length > 0) parts.push(styleAll.join(', ') + '.');
+    // Detailed + Ultra: color palette
+    if (level === 'detailed' || level === 'ultra') {
+      const palette = $('#paletteSelect').value;
+      const paletteCustom = $('#paletteCustom').value.trim();
+      const colorAll = [];
+      if (palette) colorAll.push(palette);
+      if (paletteCustom) colorAll.push(paletteCustom);
+      const colorSentence = joinSentence(P.color_prefix, colorAll);
+      if (colorSentence) parts.push(colorSentence);
+    }
 
-    const palette = $('#paletteSelect').value;
-    const paletteCustom = $('#paletteCustom').value.trim();
-    const colorAll = [];
-    if (palette) colorAll.push(palette);
-    if (paletteCustom) colorAll.push(paletteCustom);
-    const colorSentence = joinSentence(P.color_prefix, colorAll);
-    if (colorSentence) parts.push(colorSentence);
-
+    // Always: mood
     const moods = getCheckedValues('[data-group="mood"] input[type="checkbox"]');
     const moodSentence = joinSentence(P.mood_prefix, moods);
     if (moodSentence) parts.push(moodSentence);
@@ -467,11 +565,8 @@
 
     const mode = state.mode;
 
-    renderGroupedSelect(
-      $('#bgSelect'),
-      getBackgroundGroups(mode, data.backgroundPresets),
-      state.lang === 'es' ? '-- Seleccionar escenario --' : '-- Select scene --'
-    );
+    renderBackgroundCategories();
+    renderBackgroundScenes();
 
     renderCheckboxGroup($('#atmoGroup'), mode === 'advanced' ? data.atmosphere : takeFirst(data.atmosphere, 5));
     renderSelect(
@@ -587,6 +682,15 @@
     });
   }
 
+  function bindLevelToggle() {
+    $$('input[name="level"]').forEach((r) => {
+      r.addEventListener('change', () => {
+        state.level = r.value;
+        localStorage.setItem('GenFotoPrompts:level', state.level);
+      });
+    });
+  }
+
   function bindEvents() {
     $$('input[name="subject"]').forEach((r) => r.addEventListener('change', setSubjectInputState));
     $$('input[name="background"]').forEach((r) => r.addEventListener('change', setBackgroundState));
@@ -595,15 +699,21 @@
     bindLanguageToggle();
     bindModeToggle();
     bindThemeToggle();
+    bindLevelToggle();
   }
 
   function init() {
     const savedLang = localStorage.getItem('GenFotoPrompts:lang');
     const savedMode = localStorage.getItem('GenFotoPrompts:mode');
     const savedTheme = localStorage.getItem('GenFotoPrompts:theme');
+    const savedLevel = localStorage.getItem('GenFotoPrompts:level');
     if (savedLang) state.lang = savedLang;
     if (savedMode) state.mode = savedMode;
     if (savedTheme) state.theme = savedTheme;
+    if (savedLevel && ['light', 'detailed', 'ultra'].includes(savedLevel)) state.level = savedLevel;
+
+    const levelRadio = $('#levelGroup input[value="' + state.level + '"]');
+    if (levelRadio) levelRadio.checked = true;
 
     setActiveToggle('[data-lang]', state.lang, 'data-lang');
     setActiveToggle('[data-mode]', state.mode, 'data-mode');
